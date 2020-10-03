@@ -1,0 +1,65 @@
+#work {
+    h1 {
+        font-size: 6.4vw;
+        text-align: center;
+        margin: 9% 0;
+    }
+    .project {
+        width: 90%;
+        margin: 9% auto;
+            img {
+                width: 100%;
+                display: flex;
+            }
+    }
+
+    .filterBtns {
+        display: flex;
+        justify-content: space-evenly;
+
+        .underline1 {
+            width: 100% !important;
+        }
+
+        .underline3 {
+            width: 40px !important;
+        }
+
+        .underline {
+                transition: all 0.3s ease, margin-top 0.2s ease;
+                width: 40px;
+                height: 10px;
+                background-color: lightgray;
+                display: flex;
+                opacity: 1;
+                margin: 2% auto 0;
+                justify-content: center;
+        }
+
+        .filtText {
+            font-family: $paragraph-text;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 5.6vw;
+        }
+    }
+}
+
+#project {
+    
+}
+
+.underline1.highlighted {
+    margin-top: 28% !important;
+}
+
+.underline3.highlighted {
+    margin-top: 15% !important;
+}
+
+.highlighted {
+    opacity: 1 !important;
+    margin-top: 8% !important;
+    margin-bottom: 5% !important;
+    background-color: $bradley-blue !important;
+}

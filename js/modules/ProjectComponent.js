@@ -2,10 +2,27 @@ export default {
     template: `
     <div>
     <ul>
-    <li v-for="(item, index) in items" :key="index">
+    <li v-for="(item, index) in items" :key="$route.fullPath">
         <router-link :to="{
                 name: 'project-details',
-                params: { name: item.name, id: index + 1, para1: item.para1, para2: item.para2 }
+                params: {
+                    id: project.id,
+                    name: project.name,  
+                    previewImg: project.previewImg,
+                    roleDesc: project.roleDesc,
+                    toolsDesc: project.toolsDesc,
+                    introImg: project.introImg,
+                    introTitle: project.introTitle,
+                    introPara: project.introPara,
+                    middleImg: project.middleImg,
+                    middleTitle: project.middleTitle,
+                    middlePara1: project.middlePara1,
+                    middlePara2: project.middlePara2,
+                    closingImg: project.closingImg,
+                    closingTitle: project.closingTitle,
+                    closingPara1: project.closingPara1,
+                    closingPara2: project.closingPara2 
+                    }
             }">
                 {{item.name}}
         </router-link>

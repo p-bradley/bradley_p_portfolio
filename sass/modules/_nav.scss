@@ -1,0 +1,46 @@
+.mainHeader {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 6% 0 0;
+    background-color: #333;
+    max-height: 40px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding-bottom 0.3s ease;
+    z-index: 9999;
+    .topNav {
+        div {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            width: 85%;
+            margin: 0 auto 10%;
+        }
+
+        ul {
+            li {
+                text-align: center;
+                background-color: #333;
+                a {
+                    color: white;
+                }
+                &:hover {
+                    background-color: white;
+                    a {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navToggle {
+    max-height: 200px;
+    padding-bottom: 4%;
+}
+
+h1 {
+    text-transform: uppercase;
+}
