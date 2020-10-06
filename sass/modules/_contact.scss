@@ -1,0 +1,73 @@
+#contact {
+    background-color: #141414;
+    h1 {
+        color: white;
+        font-family: $heading-text;
+        font-size: 6.4vw;
+        text-align: center;
+        padding: 13% 0 10%;
+    }
+
+    div {
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        span {
+            input {
+                text-align: left;
+                width: 80%;
+                display: flex;
+                margin: 3% auto;
+                font-size: 5vw;
+                padding: 2% 2% 2.5%;
+                border: none;
+                background-color: #222222;
+                color: white;
+                outline: none;
+                font-family: $paragraph-text;
+                &::placeholder, &::-moz-placeholder {
+                    font-family: $heading-text;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    color: #868686;
+                    opacity: 1;
+                }
+            }
+            textarea {
+                width: 80%;
+                padding: 2%;
+                display: flex;
+                margin: 3% auto 0;
+                font-size: 5.4vw;
+                height: 35vw;
+                border: none;
+                background-color: #222222;
+                color: white;
+                font-family: $paragraph-text;
+                outline: none;
+                &::placeholder, &::-moz-placeholder {
+                    font-family: $heading-text;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    color: #868686;
+                    opacity: 1;
+                }
+            }
+        }
+
+        button {
+            margin: 9% auto;
+            width: 48%;
+            background-color: #222222;
+            padding: 2% 0 2.5%;
+            color: white;
+            font-family: $heading-text;
+            font-size: 5.4vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

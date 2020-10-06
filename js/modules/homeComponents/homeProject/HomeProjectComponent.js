@@ -32,7 +32,7 @@ export default {
         </router-link>
         <h2>{{ project.name }}</h2>
         <p>{{ project.previewDesc }}</p>
-        <router-link :to="{
+        <router-link class="projLink" :to="{
             name: 'project-details',
             params: {id: project.id,
                 name: project.name,  

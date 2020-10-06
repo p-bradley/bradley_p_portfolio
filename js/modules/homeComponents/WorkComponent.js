@@ -58,7 +58,7 @@ export default {
 
         fetchWork() {
             // this URL is the link to the database content needed for each project
-            let url = `./includes/index.php?getWork=true`;
+            let url = `./config/index.php?getWork=true`;
 
             // AJAX fetch call grabbing data and converting it to json
             fetch(url)
