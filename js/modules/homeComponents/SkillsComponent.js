@@ -23,6 +23,7 @@ export default {
     `,
 
     data: function() {
+        // this data is placeholder, and will be pulled from a database table at some point
         return {
             techSkills: [
                 {id: '1', name: 'Tech Skill 1', img: 'smallImg'},
@@ -45,6 +46,8 @@ export default {
     },
 
     mounted: function() {
+        // flickity is the package used for the carousel functionality
+        // this initiates flickity and allows parameters to be set for how it works
         $('.gallery').flickity({
             // options
             cellAlign: 'center',

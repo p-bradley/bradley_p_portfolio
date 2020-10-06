@@ -4,6 +4,7 @@ import SkillsComponent from './homeComponents/SkillsComponent.js';
 import ContactComponent from './homeComponents/ContactComponent.js';
 
 export default {
+    // this template is loading the home page and using components to populate the page
     template: `
     <div>
         <section id="home">

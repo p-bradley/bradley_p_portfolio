@@ -15,15 +15,19 @@ export default {
 
     data: function() {
         return {
+            // the object array for the database content
             projects: {}
         }
     },
 
     mounted: function() {
+        // call the function to load database info
         this.fetchWork();
     },
 
     methods: {
+    // when clicking a filter button, hide the other objects that do not have the associated class
+    // start of filter buttons {
         hideItems1() {
             $('.underline1').addClass("highlighted");
             $('.underline').not('.underline1').removeClass("highlighted");
@@ -49,15 +53,19 @@ export default {
             $('.project').not('.mobile').addClass("test");
             $('.underline').not('.underline3').removeClass("highlighted");
         },
+    // } end of filter buttons
+        
 
         fetchWork() {
+            // this URL is the link to the database content needed for each project
             let url = `./includes/index.php?getWork=true`;
 
             // AJAX fetch call grabbing data and converting it to json
             fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // set items array to the data grabbed
+                // allowing it to be displayed and used elsewhere
                 this.projects = data;
             })
 

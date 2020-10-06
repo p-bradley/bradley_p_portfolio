@@ -3,27 +3,31 @@ import ProjectDetailsComponent from './modules/projects/ProjectDetailsComponent.
     
     let router = new VueRouter({
         routes: [
+            // "/" path is the root path, the home page
             {path: '/', component: HomeComponent, name: 'home'},
-            {
-                path: "/projects/:id",
-                name: "project-details",
-                component: ProjectDetailsComponent
-            }
+
+            // this path is for dynamic projects, reusing the same component to render dynamic data per project
+            // without having to make a component for each project, or loading them all at once
+            { path: "/projects/:id", name: "project-details", component: ProjectDetailsComponent }
         ]
     });
 
     const vm = new Vue({
         created: function() {
-            console.log("Application Created");
+            
         },
 
         methods: {
+            // when clicking the hamburger menu icon, reveal the navigation menu
+            // as well hide it when either a link is clicked, or the menu icon is clicked again
             toggleNav() {
                 let topNav = document.querySelector(".mainHeader");
                 topNav.classList.toggle("navToggle")
                 console.log("test");
             },
 
+
+        // start of navigation linking {
             locationAbout() {
                 setTimeout(function() {
                     $('html, body').animate({
@@ -55,6 +59,7 @@ import ProjectDetailsComponent from './modules/projects/ProjectDetailsComponent.
                     }, 500);
                 }, 50)
             },
+        // } end of navigation linking
         },
 
         router: router

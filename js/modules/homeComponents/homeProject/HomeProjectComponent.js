@@ -1,7 +1,10 @@
 export default {
     props: ['project'],
 
-    template: `
+    template:
+    // this template is for each project, creating a unique project piece per item in database
+    // when clicking a project, a new link is generated with pushed content based on the link clicked
+     `
     <div class="project" :class="project.class" :id="'project' + project.id">
         <router-link :to="{
             name: 'project-details',

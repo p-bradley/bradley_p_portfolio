@@ -1,6 +1,7 @@
 import AboutCardComponent from './homeAbout/AboutCardComponent.js';
 
 export default {
+    // this template is for the about section, with a component being loaded specifically for the cards
     template: `
     <section id="about">
         <h1>[ about myself ]</h1>
@@ -14,6 +15,7 @@ export default {
     `,
 
     data: function() {
+        // this data is placeholder for when picture actually get put in
         return {
             cards: [
                 {id: '1', name: 'card one', img: 'smallImg'},
