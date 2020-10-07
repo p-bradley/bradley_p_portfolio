@@ -29,29 +29,62 @@ export default {
     // when clicking a filter button, hide the other objects that do not have the associated class
     // start of filter buttons {
         hideItems1() {
-            $('.underline1').addClass("highlighted");
-            $('.underline').not('.underline1').removeClass("highlighted");
+            if($('.underline1').hasClass("selected")) {
+                return
+            } else {
+                $('.underline1').addClass("selected");
+
+                $('.underline1').addClass("highlighted");
+                $('.underline').not('.underline1').removeClass("highlighted");
+                
+                $('.project').addClass("test");
+                $('.project').removeClass("test2");
+
+                setTimeout(function() {
+                    $('.project').addClass("test2");
+                }, 150);
+
+                $('.underline').not('.underline1').removeClass("selected");
+        }
         },
 
         hideItems2() {
-            $('.underline2').addClass("highlighted");
-            $('.responsive').removeClass("test");
-            $('.responsive').addClass("test2");
+            if($('.underline2').hasClass("selected")) {
+                return
+            } else {
+                $('.underline2').addClass("selected");
 
-            $('.project').not('.responsive').removeClass("test2");
-            $('.project').not('.responsive').addClass("test");
-            $('.underline').not('.underline2').removeClass("highlighted");
+                $('.underline2').addClass("highlighted");
+                $('.responsive').removeClass("test");
+                $('.responsive').addClass("test2");
+
+                $('.project').not('.responsive').removeClass("test2");
+                $('.project').not('.responsive').addClass("test");
+                $('.underline').not('.underline2').removeClass("highlighted");
+
+                $('.filterBtn').not('.filterBtn2').removeClass("selected");
+
+                $('.underline').not('.underline2').removeClass("selected");
+            }
         },
 
         hideItems3() {
-            $('.underline3').addClass("highlighted");
+            if($('.underline3').hasClass("selected")) {
+                return
+            } else {
+                $('.underline3').addClass("selected");
 
-            $('.mobile').removeClass("test");
-            $('.mobile').addClass("test2");
+                $('.underline3').addClass("highlighted");
 
-            $('.project').not('.mobile').removeClass("test2");
-            $('.project').not('.mobile').addClass("test");
-            $('.underline').not('.underline3').removeClass("highlighted");
+                $('.mobile').removeClass("test");
+                $('.mobile').addClass("test2");
+
+                $('.project').not('.mobile').removeClass("test2");
+                $('.project').not('.mobile').addClass("test");
+                $('.underline').not('.underline3').removeClass("highlighted");
+
+                $('.underline').not('.underline3').removeClass("selected");
+            }
         },
     // } end of filter buttons
         

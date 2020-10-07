@@ -2,6 +2,7 @@ import HomeComponent from './modules/HomeComponent.js';
 import ProjectDetailsComponent from './modules/projects/ProjectDetailsComponent.js';
     
     let router = new VueRouter({
+        mode: 'hash',
         routes: [
             // "/" path is the root path, the home page
             {path: '/', component: HomeComponent, name: 'home'},
