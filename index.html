@@ -15,7 +15,7 @@
             <nav class="topNav">
                 <div>
                     <router-link to="/"><img alt="Logo" src="images/svgs/logowhite.svg"></router-link>
-                    <img alt="dropdown button" src="images/svgs/menuwhite.svg" @click="toggleNav()">
+                    <a href="#"><img alt="dropdown button" src="images/svgs/menuwhite.svg" @click="toggleNav()"></a>
                 </div>
                 <ul>
                     <li><router-link :to="{path: '/'}" @click.native="toggleNav(); locationAbout()">About</router-link></li>
