@@ -1,8 +1,13 @@
 @import './modules/_vars.scss';
 @import './modules/_nav.scss';
+@import './modules/_about.scss';
 @import './modules/_skills.scss';
 @import './modules/_projects.scss';
 @import './modules/_contact.scss';
+
+#app {
+  overflow: hidden;
+}
 
 .mainCon {
     margin-top: 25%;

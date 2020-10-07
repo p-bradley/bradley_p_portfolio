@@ -3,9 +3,8 @@
     width: 100%;
     top: 0;
     left: 0;
-    padding: 6% 0 0;
-    background-color: #333;
-    max-height: 40px;
+    background-color: #141414;
+    max-height: 15vw;
     overflow: hidden;
     transition: max-height 0.4s ease, padding-bottom 0.3s ease;
     z-index: 9999;
@@ -15,15 +14,34 @@
             justify-content: space-between;
             color: white;
             width: 85%;
-            margin: 0 auto 10%;
+            margin: 2% auto 6%;
+            img {
+                width: 12%;
+                margin-top: -1.5%;
+            }
+
+            a {
+                width: 18%;
+                margin-top: 0.5%;
+                img {
+                    width: 100%;
+                }
+            }
         }
 
         ul {
             li {
                 text-align: center;
-                background-color: #333;
+                background-color: #141414;
+                padding: 3% 0;
+                transition: background-color 0.2s ease;
                 a {
                     color: white;
+                    font-family: $paragraph-text;
+                    font-size: 6vw;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    transition: color 0.2s ease;
                 }
                 &:hover {
                     background-color: white;
@@ -37,7 +55,7 @@
 }
 
 .navToggle {
-    max-height: 200px;
+    max-height: 64vw;
     padding-bottom: 4%;
 }
 

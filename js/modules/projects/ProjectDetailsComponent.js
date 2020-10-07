@@ -3,6 +3,7 @@ export default {
     // it takes the data that was grabbed from the database in the projects component and renders it selectively based on
     // what project was clicked. all of this data is grabbed specifically based on the id of the project clicked
     template: `
+    <div>
     <section v-if="this.$route.params.name" id="project">
         <h1>[ {{ this.$route.params.name }} ]</h1>
         <div class="projectTop">
@@ -36,6 +37,14 @@ export default {
         </div>
         <router-link :to="{ path: '../' }">back</router-link>
     </section>
+    <section v-else>
+        <h1>Looks like you tried refreshing a project</h1>
+        <h2>The project you click doesn't actually have a set link, you create one when you click the project</h2>
+        <h2>Because of this, when you refresh the page, there isn't any data to load, because you didn't choose a project</h2>
+        <h3>This helps me save money on server storage and allows for extremely fast load times, unfortunately this is the downside</h3>
+        <h3>I am working on a fix for this, terribly sorry. <span><router-link to="/">Please Click Here</router-link></span> to go back to the home page</h3>
+    </section>
+    </div>
     `,
 
     mounted: function() {
