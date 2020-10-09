@@ -13,9 +13,9 @@ export default {
 
             <span>
                 <h2>Tools Used</h2>
-                <span>
+                <p id="projTools">
                     {{ this.$route.params.toolsDesc }}
-                </span>
+                </p>
             </span>
         </div>
         <div class="projectIntro">
@@ -47,6 +47,9 @@ export default {
     </div>
     `,
 
+    created: function() {
+    },
+
     mounted: function() {
         this.unload();
 
@@ -54,6 +57,9 @@ export default {
         $('html, body').animate({
             scrollTop: $("#project").offset().top -80
         }, 500);
+
+        this.textReplace();
+
 
     },
 
@@ -66,6 +72,15 @@ export default {
             window.onbeforeunload = function() {
                 return 'Placeholder Text';
               };
+        },
+
+        // this is checking for any commas in the project tools section, and replacing them with line breaks
+        // this simplifies the front end for the content creator, and does not require a complicated SQL query or PHP script to fix
+        textReplace() {
+            setTimeout(function() {
+                var toolsDesc = document.getElementById("projTools") ;
+                toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>') ;
+            }, 100);
         }
     }
 }

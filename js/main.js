@@ -1,5 +1,6 @@
 import HomeComponent from './modules/HomeComponent.js';
 import ProjectDetailsComponent from './modules/projects/ProjectDetailsComponent.js';
+import ProjectExampleComponent from './modules/projects/ProjectExampleComponent.js';
     
     let router = new VueRouter({
         mode: 'hash',
@@ -9,7 +10,8 @@ import ProjectDetailsComponent from './modules/projects/ProjectDetailsComponent.
 
             // this path is for dynamic projects, reusing the same component to render dynamic data per project
             // without having to make a component for each project, or loading them all at once
-            { path: "/projects/:id", name: "project-details", component: ProjectDetailsComponent }
+            { path: "/projects/:id", name: "project-details", component: ProjectDetailsComponent },
+            {path: '/projEx', component: ProjectExampleComponent, name: 'project-example'},
         ]
     });
 

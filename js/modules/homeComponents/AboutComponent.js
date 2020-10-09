@@ -4,6 +4,7 @@ export default {
     // this template is for the about section, with a component being loaded specifically for the cards
     template: `
     <section id="about">
+    <router-link to="/projEx">Example Project</router-link>
         <h1>[ about myself ]</h1>
         <figure class="stack">
             <aboutCard v-for="card in cards" :card="card" :key="card.id"></aboutCard>

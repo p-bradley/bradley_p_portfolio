@@ -26,12 +26,17 @@
                 color: white;
                 outline: none;
                 font-family: $paragraph-text;
+                transition: all 0.3s ease;
                 &::placeholder, &::-moz-placeholder {
                     font-family: $heading-text;
                     font-weight: 900;
                     text-transform: uppercase;
                     color: #868686;
                     opacity: 1;
+                }
+                &:focus {
+                    background-color: white;
+                    color: #222;
                 }
             }
             textarea {
@@ -46,6 +51,7 @@
                 color: white;
                 font-family: $paragraph-text;
                 outline: none;
+                transition: all 0.3s ease;
                 &::placeholder, &::-moz-placeholder {
                     font-family: $heading-text;
                     font-weight: 900;
@@ -53,14 +59,21 @@
                     color: #868686;
                     opacity: 1;
                 }
+                &:focus {
+                    background-color: white;
+                    color: #222;
+                }
             }
         }
 
         button {
             margin: 9% auto;
-            width: 48%;
-            background-color: #222222;
-            padding: 2% 0 2.5%;
+            width: 45%;
+            background: linear-gradient(to left, #222222 50%, white 50%);
+            background-size: 200% 100%;
+            background-position:right bottom;
+            transition: all 0.3s ease;
+            padding: 3% 0 3.5%;
             color: white;
             font-family: $heading-text;
             font-size: 5.4vw;
@@ -68,6 +81,14 @@
             text-transform: uppercase;
             border: none;
             cursor: pointer;
+
+            &:hover {
+                background-position:left top;
+                color: black;
+                &::before {
+                    color: black;
+                }
+            }
         }
     }
 }

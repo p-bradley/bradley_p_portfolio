@@ -31,6 +31,7 @@
                 color: $bradley-blue;
                 text-decoration: none;
                 text-transform: uppercase;
+                font-size: 5.2vw;
             }
     }
 
@@ -43,7 +44,7 @@
         }
 
         .underline3 {
-            width: 40px !important;
+            width: 70% !important;
         }
 
         .underline {
@@ -79,4 +80,102 @@
     margin-top: 8% !important;
     margin-bottom: 5% !important;
     background-color: $bradley-blue !important;
+}
+
+#project {
+    width: 90%;
+        margin: 0 auto;
+    h1 {
+        font-size: 6.4vw;
+        text-align: center;
+    }
+
+    h2 {
+        font-family: $heading-text;
+        font-size: 5.8vw;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 7% 0 5%;
+    }
+
+    p {
+        font-family: $paragraph-text;
+        font-size: 5.2vw;
+        line-height: 5.6vw;
+        margin-bottom: 10%;
+    }
+
+    .projectTop {
+        margin-top: 10%;
+        img {
+            width: 100%;
+            display: flex;
+        }
+
+        span {
+           p {
+               line-height: 6.4vw;
+           }
+        }
+    }
+
+    .projectIntro {
+        img {
+            width: 100%;
+        }
+    }
+
+    .projectMiddle {
+        margin: 15% 0;
+        img {
+            width: 100%;
+        }
+        p {
+            margin-bottom: 5%;
+        }
+    }
+
+    .projectOutro {
+        img {
+            width: 100%;
+        }
+        p {
+            margin-bottom: 5%;
+        }
+    }
+
+    a {
+        width: 35%;
+        padding: 4% 0;
+        font-family: $heading-text;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: linear-gradient(to left, #333 50%, white 50%);
+        background-size: 200% 100%;
+        background-position:right bottom;
+        color: white;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin: 10% auto;
+        font-size: 4.8vw;
+        transition: all 0.3s ease;
+        border: solid 2px white;
+        letter-spacing: 0.2vw;
+
+        &:hover {
+            background-position:left top;
+            border: solid 2px black;
+            color: black;
+            &::before {
+                color: black;
+            }
+        }
+
+        &::before {
+            content: '[←]';
+            padding-right: 7%;
+        }
+    }
 }
