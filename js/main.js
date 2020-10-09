@@ -1,6 +1,7 @@
 import HomeComponent from './modules/HomeComponent.js';
 import ProjectDetailsComponent from './modules/projects/ProjectDetailsComponent.js';
-import ProjectExampleComponent from './modules/projects/ProjectExampleComponent.js';
+import MsgSentComponent from './modules/contact/MsgSentComponent.js';
+import NotFoundComponent from './NotFoundComponent.js';
     
     let router = new VueRouter({
         mode: 'hash',
@@ -11,7 +12,13 @@ import ProjectExampleComponent from './modules/projects/ProjectExampleComponent.
             // this path is for dynamic projects, reusing the same component to render dynamic data per project
             // without having to make a component for each project, or loading them all at once
             { path: "/projects/:id", name: "project-details", component: ProjectDetailsComponent },
-            {path: '/projEx', component: ProjectExampleComponent, name: 'project-example'},
+
+            // 404 route, the route for when a defined route can't be found or if something goes wrong
+            {path: '/404', name: "not-found", component: NotFoundComponent},
+
+            // catch if a route is hit that isn't defined and redirect to the 404 route
+            {path: '*', redirect: '/404'},
+            {path: '/sent', name: "message-sent", component: MsgSentComponent}
         ]
     });
 
