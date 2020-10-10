@@ -37,12 +37,13 @@ export default {
         </div>
         <router-link :to="{ path: '../' }">back</router-link>
     </section>
-    <section v-else>
-        <h1>Looks like you tried refreshing a project</h1>
-        <h2>The project you click doesn't actually have a set link, you create one when you click the project</h2>
-        <h2>Because of this, when you refresh the page, there isn't any data to load, because you didn't choose a project</h2>
-        <h3>This helps me save money on server storage and allows for extremely fast load times, unfortunately this is the downside</h3>
-        <h3>I am working on a fix for this, terribly sorry. <span><router-link to="/">Please Click Here</router-link></span> to go back to the home page</h3>
+    <section id="projErr" v-else>
+        <h1>[ oops ]</h1>
+        <h2>Looks like you tried refreshing a project.</h2>
+        <p>The project you click doesn't actually have a set link, you create one when you click the project.</p>
+        <p>Because of this, when you refresh the page, there isn't any data to load, because you didn't choose a project.</p>
+        <P>This helps me save money on server storage and allows for extremely fast load times, unfortunately this is the downside.</p>
+        <p>I am working on a fix for this, terribly sorry. Please <router-link to="/">Click Here</router-link> to go back to the home page.</p>
     </section>
     </div>
     `,

@@ -54,7 +54,7 @@
                 background-color: lightgray;
                 display: flex;
                 opacity: 1;
-                margin: 2% auto 0;
+                margin: 5px auto 0;
                 justify-content: center;
         }
 
@@ -79,7 +79,7 @@
     opacity: 1 !important;
     margin-top: 8% !important;
     margin-bottom: 5% !important;
-    background-color: $bradley-blue !important;
+    background-color: #141414 !important;
 }
 
 #project {
@@ -151,7 +151,7 @@
         font-weight: 900;
         text-transform: uppercase;
         text-decoration: none;
-        background: linear-gradient(to left, #333 50%, white 50%);
+        background: linear-gradient(to left, #141414 50%, white 50%);
         background-size: 200% 100%;
         background-position:right bottom;
         color: white;
@@ -176,6 +176,39 @@
         &::before {
             content: '[←]';
             padding-right: 7%;
+        }
+    }
+}
+
+#projErr {
+    background-color: #141414;
+    height: 100vh;
+    margin-top: -10%;
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 6.8vw;
+        padding-top: 10%;
+    }
+    
+    h2 {
+        font-size: 6vw;
+        color: white;
+        font-family: $paragraph-text;
+        width: 80%;
+        margin: 5% auto 0;
+    }
+
+    p {
+        font-family: $paragraph-text;
+        font-size: 5.4vw;
+        margin: 5% auto 0;
+        color: white;
+        width: 80%;
+        line-height: 6.4vw;
+
+        a {
+            color: white;
         }
     }
 }

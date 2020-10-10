@@ -6,12 +6,18 @@
 @import './modules/_projects.scss';
 @import './modules/_contact.scss';
 @import './modules/_footer.scss';
+@import './modules/_queries.scss';
+
 html, body {
   height: 100%;
 }
 
 #app {
   min-height: 100%;
+}
+
+.flickity-page-dots .dot {
+  background: #141414 !important;
 }
 
 .mainCon {

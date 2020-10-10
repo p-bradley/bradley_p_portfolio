@@ -17,10 +17,10 @@ function submit($fname, $lname, $message, $email){
         $mail->Port = 587;
         $mail->SMTPAuth=true;
 
-        $mail->Username='thorntoncustomstest@gmail.com';
-        $mail->Password='dmgfrhcnwsnfaufu';
+        $mail->Username='patrickbradleydesign@gmail.com';
+        $mail->Password='ftudzcercuvcmxut';
 
-        $mail->addAddress('thorntoncustomstest@gmail.com');
+        $mail->addAddress('patrickbradleydesign@gmail.com');
         $mail->setFrom($email);
         
         $mail->isHTML(true);
