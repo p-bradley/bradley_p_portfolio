@@ -26,7 +26,7 @@
                 outline: none;
                 font-family: $paragraph-text;
                 transition: all 0.3s ease;
-                &::placeholder, &::-moz-placeholder {
+                &::placeholder, &::-webkit-input-placeholder {
                     font-family: $heading-text;
                     font-weight: 900;
                     text-transform: uppercase;
@@ -51,7 +51,7 @@
                 font-family: $paragraph-text;
                 outline: none;
                 transition: all 0.3s ease;
-                &::placeholder, &::-moz-placeholder {
+                &::placeholder, &::-webkit-input-placeholder {
                     font-family: $heading-text;
                     font-weight: 900;
                     text-transform: uppercase;

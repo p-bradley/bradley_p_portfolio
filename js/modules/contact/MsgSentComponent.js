@@ -6,8 +6,8 @@ export default {
         <p>I'll get back to you as soon as I can!</p>
         <router-link to="/">[ back home ]</router-link>
         <div class="sentQuote">
-            <h2>"Simplicity is the ultimate sophistication."</span>
-            <h2>- Leonardo da Vinci</span>
+            <h2>"Simplicity is the ultimate sophistication."</h2>
+            <h2>- Leonardo da Vinci</h2>
         </div>
     </section>
     `

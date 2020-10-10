@@ -14,3 +14,20 @@
         }
     }
 }
+
+@media screen and (min-width: 340px) {
+    .flickity-viewport {
+        height: 61vw !important;
+    }
+    #skills {
+        .skillsCon {
+            .gallery {
+                .gallery-cell {
+                    p {
+                        margin-top: 9%;
+                    }
+                }
+            }
+        }
+    }
+}
