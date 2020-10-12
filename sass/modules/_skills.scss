@@ -1,4 +1,7 @@
 #skills {
+    .allSkillsConTab {
+        display: none;
+    }
     margin-bottom: 25%;
     h1 {
         font-size: 6.4vw;
@@ -10,7 +13,7 @@
     .techSkillCon {
         margin: 15% auto 0;
     }
-    .skillsCon {
+    .skillsCon, .skillsConTab {
         width: 85%;
         h2 {
             font-family: $heading-text;

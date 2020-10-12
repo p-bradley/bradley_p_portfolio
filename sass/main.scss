@@ -29,6 +29,14 @@ html, body {
   overflow: hidden;
 }
 
+.skillActive {
+  display: block;
+}
+
+.skillInactive {
+  display: none;
+}
+
 .test {
     animation: removeContent 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     animation-fill-mode: forwards;

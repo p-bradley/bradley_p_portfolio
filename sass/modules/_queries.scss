@@ -1,3 +1,20 @@
+@media screen and (min-width: 340px) {
+    .flickity-viewport {
+        height: 61vw !important;
+    }
+    #skills {
+        .skillsCon {
+            .gallery {
+                .gallery-cell {
+                    p {
+                        margin-top: 9%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 414px) {
     #contact {
         div {
@@ -15,19 +32,199 @@
     }
 }
 
-@media screen and (min-width: 340px) {
-    .flickity-viewport {
-        height: 61vw !important;
+@media screen and (min-width: 768px) {
+    .mainCon {
+        margin-top: 20% !important;
     }
-    #skills {
-        .skillsCon {
-            .gallery {
-                .gallery-cell {
-                    p {
-                        margin-top: 9%;
+    .mainHeader {
+        max-height: 11vw;
+        .topNav {
+            div {
+                a {
+                    width: 10%;
+                }
+                a:nth-child(2) {
+                    width: 7%;
+                    margin-top: 0.5%;
+                }
+            }
+            ul {
+                margin-top: -3%;
+                li {
+                    padding: 2.5%;
+                    a {
+                        font-size: 3.6vw;
                     }
                 }
             }
         }
     }
+    .navToggle {
+        max-height: 74vw !important;
+        padding-bottom: 3% !important;
+    }
+    #about {
+        width: 94%;
+        margin: 0 auto 15%;
+        h1 {
+            text-align: left;
+            font-size: 3.2vw;
+            margin-left: 5%;
+        }
+        .aboutWrapper {
+            figure {
+                width: 64%;
+            }
+            .aboutTextCon {
+                padding-top: 70%;
+                h2,h3 {
+                    display: block;
+                    font-family: $heading-text;
+                    text-transform: uppercase;
+                    font-weight: 900
+                }
+                h2 {
+                    font-size: 3.2vw;
+                }
+                h3 {
+                    margin-top: 1.5%;
+                    font-size: 2.8vw;
+                    margin-bottom: 3.5%;
+                }
+                p {
+                    font-size: 2.4vw;
+                    line-height: 3vw;
+                    width: 97%;
+                    -ms-word-break: break-all;
+                    word-break: break-all;
+                    /* Non standard for WebKit */
+                    word-break: break-word;
+                    -webkit-hyphens: auto;
+                    -moz-hyphens: auto;
+                        hyphens: auto;
+                }
+            }
+        }
+    }
+
+    #work {
+        width: 94%;
+        margin: 0 auto 20%;
+        h1 {
+            text-align: left;
+            font-size: 3.2vw;
+            margin-left: 5%;
+        }
+        .filterBtns {
+            width: 50%;
+            margin: 0 auto;
+            justify-content: space-between;
+            .filtText {
+                font-size: 2.8vw;
+            }
+            .underline {
+                width: 35%;
+            }
+            .underline3 {
+                width: 55% !important;
+            }
+        }
+
+        .project {
+            width: 70%;
+            a {
+                width: 85%;
+                margin: 0 auto;
+                display: flex;
+                img {
+                    margin: 0 auto 8%;
+                }
+            }
+            a:nth-child(4) {
+                width: 100%;
+                font-size: 2.4vw;
+            }
+            h2 {
+                font-size: 3.2vw;
+            }
+            p {
+                font-size: 2.4vw;
+                line-height: 2.8vw;
+                margin: 4% 0;
+            }
+        }
+    }
+
+    #skills {
+        width: 94%;
+        margin: 0 auto 20%;
+        h1 {
+            text-align: left;
+            margin-left: 5%;
+            font-size: 3.2vw;
+        }
+        .allSkillsCon {
+            display: none;
+        }
+        .allSkillsConTab {
+            margin-top: 10%;
+            display: block;
+
+            .skillsFilterBtns {
+                display: flex;
+                justify-content: space-evenly;
+                width: 65%;
+                margin: 0 auto;
+                height: 4vw;
+        
+                .skillUnderline {
+                    transition: all 0.3s ease, margin-top 0.2s ease;
+                    width: 38%;
+                    height: 10px;
+                    background-color: lightgray;
+                    display: flex;
+                    opacity: 1;
+                    margin: 5px auto 0;
+                    justify-content: center;
+                }
+        
+                .filtText {
+                    font-family: $paragraph-text;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 2.8vw;
+                    cursor: pointer;
+                }
+        
+            }
+
+            .skillsConTab {
+                width: 100%;
+                margin: 5% auto 0;
+                
+                .galleryTab {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    width: 100%;
+                    div {
+                        width: 30%;
+                        margin-top: 5%;
+                        img {
+                            width: 80%;
+                            margin: 0 auto;
+                            display: flex;
+                        }
+                        p {
+                            margin-top: 6%;
+                            text-align: center;
+                            font-family: $paragraph-text;
+                            font-size: 2.2vw;
+                          }
+                    }
+                }
+            }
+        }
+    }
+    
 }

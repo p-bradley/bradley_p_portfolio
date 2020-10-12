@@ -5,16 +5,18 @@
         text-align: center;
     }
 
+    .aboutWrapper {
     figure {
         margin: 9% auto;
         width: 90%;
         position: relative;
         .card {
+            width: 90%;
             background-color: white;
             background: linear-gradient(to bottom, rgba(235,236,240,1) 0%,rgba(255,255,255,1) 60%);
             border: 1px solid #ccc;
             position: absolute;
-            transform: translateX(0);
+            right: 50%;
             animation: onTop 12s 2s ease infinite;
             img {
                 width: 100%;
@@ -40,14 +42,20 @@
             animation-name: onBottom;
         }
     }
-
-    p {
-        width: 90%;
-        margin: 105% auto 0;
+    .aboutTextCon {
+      width: 90%;
+      margin: 0 auto;
+      padding: 90% 0 0;
+      h2, h3 {
+        display: none;
+      }
+      p {
         font-family: $paragraph-text;
         line-height: 6.2vw;
         font-size: 5.2vw;
     }
+    }
+  }
 }
 
 @keyframes onTop {

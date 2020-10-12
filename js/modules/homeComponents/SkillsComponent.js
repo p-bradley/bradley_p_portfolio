@@ -19,6 +19,22 @@ export default {
                 </div>
             </div>
         </div>
+        <div class="allSkillsConTab">
+            <div class="skillsFilterBtns">
+                <div class="skillFilterBtn skillFiltBtn1" @click="hideSkills1()"><span class="filtText">tech skills</span><span class="skillUnderline selected highlighted skillUnderline1"></span></div>
+                <div class="skillsFilterBtn skillFiltBtn2" @click="hideSkills2()"><span class="filtText">hard skills</span><span class="skillUnderline skillUnderline2"></span></div>
+            </div>
+            <div class="skillsConTab techSkillConTab">
+            <div class="galleryTab">
+                <techSkillsCon class="gallery-cell" v-for="(techSkill, index) in techSkills" :techSkill="techSkill" :key="index"></techSkillsCon>
+            </div>
+        </div>
+        <div class="skillsConTab hardSkillConTab skillInactive">
+            <div class="galleryTab">
+                <hardSkillsCon class="gallery-cell" v-for="(hardSkill, index) in hardSkills" :hardSkill="hardSkill" :key="index"></hardSkillsCon>
+            </div>
+        </div>
+        </div>
     </section>
     `,
 
@@ -54,6 +70,48 @@ export default {
             contain: true,
             wrapAround: true
           });
+    },
+
+    methods: {
+        hideSkills1() {
+            if($('.skillUnderline1').hasClass("selected")) {
+                return
+            } else {
+                $('.skillUnderline1').addClass("selected");
+
+                $('.skillUnderline1').addClass("highlighted");
+                $('.techSkillConTab').removeClass("skillInactive");
+                $('.techSkillConTab').addClass("skillActive");
+
+                $('.hardSkillConTab').removeClass("skillActive");
+                $('.hardSkillConTab').addClass("skillInactive");
+                $('.skillUnderline').not('.skillUnderline1').removeClass("highlighted");
+
+                $('.skillFilterBtn').not('.skillFilterBtn1').removeClass("selected");
+
+                $('.skillUnderline').not('.skillUnderline1').removeClass("selected");
+            }
+        },
+
+        hideSkills2() {
+            if($('.skillUnderline2').hasClass("selected")) {
+                return
+            } else {
+                $('.skillUnderline2').addClass("selected");
+
+                $('.skillUnderline2').addClass("highlighted");
+                $('.hardSkillConTab').removeClass("skillInactive");
+                $('.hardSkillConTab').addClass("skillActive");
+
+                $('.techSkillConTab').removeClass("skillActive");
+                $('.techSkillConTab').addClass("skillInactive");
+                $('.skillUnderline').not('.skillUnderline2').removeClass("highlighted");
+
+                $('.skillFilterBtn').not('.skillFilterBtn2').removeClass("selected");
+
+                $('.skillUnderline').not('.skillUnderline2').removeClass("selected");
+            }
+        },
     },
 
     components: {
