@@ -1,4 +1,6 @@
 export default {
+    // props are custom attributes you can register on a component
+    //  this prop is pulling data from the projects array in the work component and using it here
     props: ['project'],
 
     template:

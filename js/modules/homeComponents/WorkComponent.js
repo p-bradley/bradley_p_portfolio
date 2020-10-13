@@ -1,6 +1,10 @@
+// import the components from their folders
+// imports are always first
 import HomeProjectComponent from './homeProject/HomeProjectComponent.js';
 
 export default {
+    // this template is generating the work section, defining the filter buttons, and using DB info to render projects
+    // v-for is saying "load the project template X times, where X is the number of projects in the array" 
     template: `
     <section id="work">
         <h1>[ my work ]</h1>
@@ -106,7 +110,8 @@ export default {
             .catch((err) => console.log(err))
         },
     },
-
+    
+    // define what components are being used
     components: {
         homeProject: HomeProjectComponent
     }

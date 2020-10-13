@@ -1,3 +1,5 @@
+// import the components from their folders
+// imports are always first
 import AboutCardComponent from './homeAbout/AboutCardComponent.js';
 
 export default {
@@ -30,7 +32,8 @@ export default {
             ]
         }
     },
-
+    
+    // define what components are being used
     components: {
         aboutCard: AboutCardComponent
     }

@@ -1,7 +1,12 @@
+// import the components from their folders
+// imports are always first
 import TechSkillsComponent from './homeSkills/TechSkillsComponent.js';
 import HardSkillsComponent from './homeSkills/HardSkillsComponent.js';
 
 export default {
+    // this template is generating the skills section, but it is very clunky right now
+    // the template contains the same content twice. one part is for mobile, in the format of sliders, the other is tablet and desktop as filters
+    // the reason the content is loaded twice, is because it works while i look for a reliable way to switch from slide to filt
     template: `
     <section id="skills">
         <h1>[ my skills ]</h1>
@@ -39,24 +44,26 @@ export default {
     `,
 
     data: function() {
-        // this data is placeholder, and will be pulled from a database table at some point
+        // these are the arrays for each icon id, name and image
+        // this content is static, meaning that it is not loaded or changed through a database
         return {
+            // array for the tech skills
             techSkills: [
-                {id: '1', name: 'Tech Skill 1', img: 'smallImg'},
-                {id: '2', name: 'Tech Skill 2', img: 'medImg'},
-                {id: '3', name: 'Tech Skill 3', img: 'smallImg'},
-                {id: '4', name: 'Tech Skill 4', img: 'medImg'},
-                {id: '5', name: 'Tech Skill 5', img: 'smallImg'},
-                {id: '6', name: 'Tech Skill 6', img: 'medImg'},
+                {id: '1', name: 'Photoshop', img: 'photoshop'},
+                {id: '2', name: 'Illustrator', img: 'illustrator'},
+                {id: '3', name: 'Figma', img: 'figma'},
+                {id: '4', name: 'InVision', img: 'invision'},
+                {id: '5', name: 'Adobe XD', img: 'xd'},
+                {id: '6', name: 'InDesign', img: 'indesign'},
             ],
-
+            // array for the hard skills
             hardSkills: [
-                {id: '1', name: 'Hard Skill 1', img: 'medImg'},
-                {id: '2', name: 'Hard Skill 2', img: 'smallImg'},
-                {id: '3', name: 'Hard Skill 3', img: 'medImg'},
-                {id: '4', name: 'Hard Skill 4', img: 'smallImg'},
-                {id: '5', name: 'Hard Skill 5', img: 'smallImg'},
-                {id: '6', name: 'Hard Skill 6', img: 'medImg'},
+                {id: '1', name: 'Wireframing', img: 'wireframing'},
+                {id: '2', name: 'Prototyping', img: 'prototyping'},
+                {id: '3', name: 'UX Writing', img: 'uxwriting'},
+                {id: '4', name: 'Typography', img: 'typography'},
+                {id: '5', name: 'User Engagement', img: 'userengagement'},
+                {id: '6', name: 'Branding', img: 'branding'},
             ],
         }
     },
@@ -68,11 +75,13 @@ export default {
             // options
             cellAlign: 'center',
             contain: true,
-            wrapAround: true
+            wrapAround: true,
           });
     },
 
     methods: {
+        // when clicking a filter button, hide the other objects that do not have the associated class
+        // start of filter buttons {
         hideSkills1() {
             if($('.skillUnderline1').hasClass("selected")) {
                 return
@@ -112,8 +121,10 @@ export default {
                 $('.skillUnderline').not('.skillUnderline2').removeClass("selected");
             }
         },
+        // } end of filter buttons
     },
-
+    
+    // define what components are being used
     components: {
         techSkillsCon: TechSkillsComponent,
         hardSkillsCon: HardSkillsComponent

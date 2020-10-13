@@ -1,4 +1,5 @@
 export default {
+    // this template is generating the message sent page for when an email is sent
     template: `
     <section id="messageSent">
         <h1>[ thank you! ]</h1>

@@ -1,4 +1,5 @@
 export default {
+    // this template is generating the 404 page for when a link is visited that doesnt actually exist
     template: `
     <section id="notFound">
         <h1>[ yikes ]</h1>

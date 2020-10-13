@@ -35,7 +35,7 @@ export default {
             <p>{{ this.$route.params.closingPara1 }}</p>
             <p>{{ this.$route.params.closingPara1 }}</p>
         </div>
-        <router-link :to="{ path: '../' }">back</router-link>
+        <router-link class="projBackBtn" v-on:click.native="scrollToWork()" :to="{ path: '../' }">back</router-link>
     </section>
     <section id="projErr" v-else>
         <h1>[ oops ]</h1>
@@ -52,7 +52,6 @@ export default {
     },
 
     mounted: function() {
-        this.unload();
 
         // transition to the top of the page when loaded
         $('html, body').animate({
@@ -73,6 +72,14 @@ export default {
             window.onbeforeunload = function() {
                 return 'Placeholder Text';
               };
+        },
+
+        // this scroll back to the top of the work section when clicking the back button on any project specific
+        // TODO work on a way to get it to focus on the project that was clicked (probably match ids and animate to that on home)
+        scrollToWork() {
+            $('html, body').animate({
+                scrollTop: $("#work").offset().top -80
+            }, 500);
         },
 
         // this is checking for any commas in the project tools section, and replacing them with line breaks
