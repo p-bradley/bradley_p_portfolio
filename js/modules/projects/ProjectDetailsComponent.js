@@ -85,7 +85,10 @@ export default {
         // this is checking for any commas in the project tools section, and replacing them with line breaks
         // this simplifies the front end for the content creator, and does not require a complicated SQL query or PHP script to fix
         textReplace() {
+            let winHeight = window.screen.height,
+                winWidth = window.screen.width;
             setTimeout(function() {
+                console.log(winHeight, winWidth)
                 var toolsDesc = document.getElementById("projTools") ;
                 toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>') ;
             }, 100);
