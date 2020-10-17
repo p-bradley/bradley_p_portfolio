@@ -10,10 +10,20 @@
         .project {
             width: 90%;
             margin: 9% auto;
+            a.mobile {
+                width: 75%;
+                display: flex;
+                margin: 0 auto;
+            }
+            a.responsive {
+                width: 90%;
+                display: flex;
+                margin: 0 auto;
+            }
             a {
                 width: 100%;
                 img {
-                    width: auto;
+                    width: 100%;
                 }
             }
                 img {
