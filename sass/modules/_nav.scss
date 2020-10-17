@@ -39,11 +39,12 @@
                 transition: background-color 0.2s ease;
                 a {
                     color: white;
-                    font-family: $paragraph-text;
+                    font-family: $heading-text;
                     font-size: 6vw;
                     text-decoration: none;
                     text-transform: uppercase;
                     transition: color 0.2s ease;
+                    font-weight: 900;
                 }
                 &:hover {
                     background-color: white;

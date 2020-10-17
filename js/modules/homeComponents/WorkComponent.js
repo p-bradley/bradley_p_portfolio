@@ -13,7 +13,9 @@ export default {
             <div class="filterBtn filtBtn2" @click="hideItems2()"><span class="filtText">responsive</span><span class="underline underline2"></span></div>
             <div class="filterBtn filtBtn3" @click="hideItems3()"><span class="filtText">mobile</span><span class="underline underline3"></span></div>
         </div>
-        <homeProject v-for="(project, index) in projects" :project="project" :key="project.id"></homeProject>
+        <div class="workCon">
+            <homeProject v-for="(project, index) in projects" :project="project" :key="project.id"></homeProject>
+        </div>
     </section>
     `,
 
@@ -47,6 +49,11 @@ export default {
                 setTimeout(function() {
                     $('.project').addClass("test2");
                 }, 150);
+
+                setTimeout(function() {
+                    $('.project').removeClass("test2");
+                    $('.project').removeClass("test")
+                }, 1200)
 
                 $('.underline').not('.underline1').removeClass("selected");
         }

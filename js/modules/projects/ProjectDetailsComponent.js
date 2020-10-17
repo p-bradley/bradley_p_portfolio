@@ -7,7 +7,7 @@ export default {
     <section v-if="this.$route.params.name" id="project">
         <h1>[ {{ this.$route.params.name }} ]</h1>
         <div class="projectTop">
-            <img :src="'images/' + this.$route.params.previewImg + '.jpg'">
+            <img :src="'images/' + this.$route.params.previewImg + '.png'">
             <h2>my role</h2>
             <p>{{ this.$route.params.roleDesc }}</p>
 

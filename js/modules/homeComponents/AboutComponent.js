@@ -12,11 +12,10 @@ export default {
                 <aboutCard v-for="card in cards" :card="card" :key="card.id"></aboutCard>
             </figure>
             <div class="aboutTextCon">
-                <h2>[ Patrick Bradley ]</h2>
+                <h2 class="aboutName">[ Patrick Bradley ]</h2>
                 <h3>UX/UI Designer</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-                </p>
+                <p>Hey! I'm Patrick, a London, Ontario based UX/UI Designer that focuses on simplifying modern interfaces to produce unique, engaging user experiences for responsive websites and mobile applications.</p>
+                <p>My interests (outside of design): hockey, swimming, thrifting, 90's and early 2000's Nintendo games, lofi-house, Stanley Kubrick and Quentin Tarantino movies, and photography!</p>
             </div>
         </div>
     </section>
@@ -30,6 +29,24 @@ export default {
                 {id: '2', name: 'card two', img: 'smallImg'},
                 {id: '3', name: 'card three', img: 'smallImg'},
             ]
+        }
+    },
+
+    mounted: function() {
+        this.nameReplace();
+        window.addEventListener("resize", this.nameReplace);
+    },
+
+    methods: {
+        nameReplace() {
+            let winHeight = window.screen.height,
+                winWidth = screen.width;
+                if (winWidth > 1279) {
+                    console.log(window.screen.width);
+                    $(".aboutName").text("Patrick Bradley");
+                } else {
+                    $(".aboutName").text("[ Patrick Bradley ]");
+                }
         }
     },
     
