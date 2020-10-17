@@ -8,7 +8,7 @@ export default {
     // when clicking a project, a new link is generated with pushed content based on the link clicked
      `
     <div class="project" :class="project.class" :id="'project' + project.id">
-        <router-link :to="{
+        <router-link :class="project.class" :to="{
             name: 'project-details',
             params: {
                 id: project.id,
