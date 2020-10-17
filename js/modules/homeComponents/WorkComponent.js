@@ -1,6 +1,10 @@
+// import the components from their folders
+// imports are always first
 import HomeProjectComponent from './homeProject/HomeProjectComponent.js';
 
 export default {
+    // this template is generating the work section, defining the filter buttons, and using DB info to render projects
+    // v-for is saying "load the project template X times, where X is the number of projects in the array" 
     template: `
     <section id="work">
         <h1>[ my work ]</h1>
@@ -9,7 +13,9 @@ export default {
             <div class="filterBtn filtBtn2" @click="hideItems2()"><span class="filtText">responsive</span><span class="underline underline2"></span></div>
             <div class="filterBtn filtBtn3" @click="hideItems3()"><span class="filtText">mobile</span><span class="underline underline3"></span></div>
         </div>
-        <homeProject v-for="(project, index) in projects" :project="project" :key="project.id"></homeProject>
+        <div class="workCon">
+            <homeProject v-for="(project, index) in projects" :project="project" :key="project.id"></homeProject>
+        </div>
     </section>
     `,
 
@@ -43,6 +49,11 @@ export default {
                 setTimeout(function() {
                     $('.project').addClass("test2");
                 }, 150);
+
+                setTimeout(function() {
+                    $('.project').removeClass("test2");
+                    $('.project').removeClass("test")
+                }, 1200)
 
                 $('.underline').not('.underline1').removeClass("selected");
         }
@@ -106,7 +117,8 @@ export default {
             .catch((err) => console.log(err))
         },
     },
-
+    
+    // define what components are being used
     components: {
         homeProject: HomeProjectComponent
     }

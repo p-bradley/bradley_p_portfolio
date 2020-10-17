@@ -7,7 +7,7 @@ export default {
     <section v-if="this.$route.params.name" id="project">
         <h1>[ {{ this.$route.params.name }} ]</h1>
         <div class="projectTop">
-            <img :src="'images/' + this.$route.params.previewImg + '.jpg'">
+            <img :src="'images/' + this.$route.params.previewImg + '.png'">
             <h2>my role</h2>
             <p>{{ this.$route.params.roleDesc }}</p>
 
@@ -35,7 +35,7 @@ export default {
             <p>{{ this.$route.params.closingPara1 }}</p>
             <p>{{ this.$route.params.closingPara1 }}</p>
         </div>
-        <router-link :to="{ path: '../' }">back</router-link>
+        <router-link class="projBackBtn" v-on:click.native="scrollToWork()" :to="{ path: '../' }">back</router-link>
     </section>
     <section id="projErr" v-else>
         <h1>[ oops ]</h1>
@@ -52,7 +52,6 @@ export default {
     },
 
     mounted: function() {
-        this.unload();
 
         // transition to the top of the page when loaded
         $('html, body').animate({
@@ -75,12 +74,28 @@ export default {
               };
         },
 
+        // this scroll back to the top of the work section when clicking the back button on any project specific
+        // TODO work on a way to get it to focus on the project that was clicked (probably match ids and animate to that on home)
+        scrollToWork() {
+            $('html, body').animate({
+                scrollTop: $("#work").offset().top -80
+            }, 500);
+        },
+
         // this is checking for any commas in the project tools section, and replacing them with line breaks
         // this simplifies the front end for the content creator, and does not require a complicated SQL query or PHP script to fix
         textReplace() {
+            let winHeight = window.screen.height,
+                winWidth = screen.width;
+
+            var toolsDesc = document.getElementById("projTools") ;
             setTimeout(function() {
-                var toolsDesc = document.getElementById("projTools") ;
-                toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>') ;
+                if (winWidth > 767) {
+                    console.log(window.screen.width);
+                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,', ');
+                } else {
+                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
+                }
             }, 100);
         }
     }

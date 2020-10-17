@@ -1,4 +1,6 @@
 export default {
+    // props are custom attributes you can register on a component
+    //  this prop is pulling data from the projects array in the work component and using it here
     props: ['project'],
 
     template:
@@ -28,33 +30,35 @@ export default {
             }
         
         }">
-            <img :src="'images/' + project.previewImg + '.jpg'">
+            <img :class="project.class" :src="'images/' + project.previewImg + '.png'">
         </router-link>
-        <h2>{{ project.name }}</h2>
-        <p>{{ project.previewDesc }}</p>
-        <router-link class="projLink" :to="{
-            name: 'project-details',
-            params: {id: project.id,
-                name: project.name,  
-                previewImg: project.previewImg,
-                roleDesc: project.roleDesc,
-                toolsDesc: project.toolsDesc,
-                introImg: project.introImg,
-                introTitle: project.introTitle,
-                introPara: project.introPara,
-                middleImg: project.middleImg,
-                middleTitle: project.middleTitle,
-                middlePara1: project.middlePara1,
-                middlePara2: project.middlePara2,
-                closingImg: project.closingImg,
-                closingTitle: project.closingTitle,
-                closingPara1: project.closingPara1,
-                closingPara2: project.closingPara2
-            }
-        
-        }">
-            See More
-        </router-link>
+        <div class="projTextLink">
+            <h2>{{ project.name }}</h2>
+            <p>{{ project.previewDesc }}</p>
+            <router-link class="projLink" :to="{
+                name: 'project-details',
+                params: {id: project.id,
+                    name: project.name,  
+                    previewImg: project.previewImg,
+                    roleDesc: project.roleDesc,
+                    toolsDesc: project.toolsDesc,
+                    introImg: project.introImg,
+                    introTitle: project.introTitle,
+                    introPara: project.introPara,
+                    middleImg: project.middleImg,
+                    middleTitle: project.middleTitle,
+                    middlePara1: project.middlePara1,
+                    middlePara2: project.middlePara2,
+                    closingImg: project.closingImg,
+                    closingTitle: project.closingTitle,
+                    closingPara1: project.closingPara1,
+                    closingPara2: project.closingPara2
+                }
+            
+            }">
+                See More
+            </router-link>
+        </div>
     </div>
     `
 }

@@ -6,33 +6,43 @@
         text-align: center;
         margin: 9% 0;
     }
-    .project {
-        width: 90%;
-        margin: 9% auto;
-            img {
+    .workCon {
+        .project {
+            width: 90%;
+            margin: 9% auto;
+            a {
                 width: 100%;
-                margin: 4% auto 8%;
-                display: flex;
+                img {
+                    width: auto;
+                }
             }
-            h2 {
-                font-family: $heading-text;
-                font-weight: 900;
-                font-size: 6vw;
-                text-transform: uppercase;
-            }
-            p {
-                font-family: $paragraph-text;
-                font-size: 5.2vw;
-                margin: 5% 0;
-            }
+                img {
+                    width: 100%;
+                    margin: 4% auto 8%;
+                    display: flex;
+                }
+                .projTextLink {
+                    h2 {
+                        font-family: $heading-text;
+                        font-weight: 900;
+                        font-size: 6vw;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        font-family: $paragraph-text;
+                        font-size: 5.2vw;
+                        margin: 5% 0;
+                    }
 
-            .projLink {
-                font-family: $paragraph-text;
-                color: $bradley-blue;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-size: 5.2vw;
-            }
+                    .projLink {
+                        font-family: $paragraph-text;
+                        color: $bradley-blue;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 5.2vw;
+                    }
+                }
+        }
     }
 
     .filterBtns {
@@ -49,7 +59,7 @@
 
         .underline {
                 transition: all 0.3s ease, margin-top 0.2s ease;
-                width: 40px;
+                width: 41%;
                 height: 10px;
                 background-color: lightgray;
                 display: flex;
