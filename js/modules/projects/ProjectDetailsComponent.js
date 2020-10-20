@@ -7,16 +7,19 @@ export default {
     <section v-if="this.$route.params.name" id="project">
         <h1>[ {{ this.$route.params.name }} ]</h1>
         <div class="projectTop">
-            <img :src="'images/' + this.$route.params.previewImg + '.png'">
-            <h2>my role</h2>
-            <p>{{ this.$route.params.roleDesc }}</p>
-
-            <span>
-                <h2>Tools Used</h2>
-                <p id="projTools">
-                    {{ this.$route.params.toolsDesc }}
-                </p>
-            </span>
+            <img :class="this.$route.params.class" :src="'images/' + this.$route.params.previewImg + '.png'">
+            <div class="roleToolCon">
+                <span>
+                    <h2>my role</h2>
+                    <p>{{ this.$route.params.roleDesc }}</p>
+                </span>
+                <span>
+                    <h2>Tools Used</h2>
+                    <p id="projTools">
+                        {{ this.$route.params.toolsDesc }}
+                    </p>
+                </span>
+            </div>
         </div>
         <div class="projectIntro">
             <img :src="'images/' + this.$route.params.introImg + '.jpg'">
@@ -27,12 +30,10 @@ export default {
             <img :src="'images/' + this.$route.params.middleImg + '.jpg'">
             <h2>{{ this.$route.params.middleTitle }}</h2>
             <p>{{ this.$route.params.middlePara1 }}</p>
-            <p>{{ this.$route.params.middlePara1 }}</p>
         </div>
         <div class="projectOutro">
             <img :src="'images/' + this.$route.params.closingImg + '.jpg'">
             <h2>{{ this.$route.params.middleTitle }}</h2>
-            <p>{{ this.$route.params.closingPara1 }}</p>
             <p>{{ this.$route.params.closingPara1 }}</p>
         </div>
         <router-link class="projBackBtn" v-on:click.native="scrollToWork()" :to="{ path: '../' }">back</router-link>

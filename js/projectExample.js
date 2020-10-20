@@ -7,30 +7,32 @@ export default {
     <section id="project">
         <h1>[ Example Project ]</h1>
         <div class="projectTop">
-            <img :src="'images/smallImg.jpg'">
-            <h2>my role</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+            <img :src="'images/ipad.png'">
+            <div class="roleToolCon">
+            <span>
+                <h2>my role</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+            </span>
             <span>
                 <h2>Tools Used</h2>
                 <p id="projTools">Pen + Paper,Photoshop,Figma</p>
             </span>
+            </div>
         </div>
         <div class="projectIntro">
-            <img :src="'images/medImg.jpg'">
+            <img :src="'images/vancouver.jpg'">
             <h2>Excepteur sint occaecat cupidatat</h2>
-            <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae vitae dicta sunt explicabo doloremque laudantium.</p>
         </div>
         <div class="projectMiddle">
-            <img :src="'images/largeImg.jpg'">
+            <img :src="'images/vancouver.jpg'">
             <h2>Nemo enim ipsam</h2>
-            <p>voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <p>voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
         </div>
         <div class="projectOutro">
-            <img :src="'images/medImg.jpg'">
+            <img :src="'images/vancouver.jpg'">
             <h2>quis nostrum</h2>
-            <p>exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias</p>
+            <p>exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias</p>
         </div>
         <router-link :to="{ path: '../' }">back</router-link>
     </section>
@@ -61,6 +63,8 @@ export default {
                 if (winWidth > 767) {
                     console.log(window.screen.width);
                     toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,', ');
+                } if (winWidth < 1365) {
+                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
                 } else {
                     toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
                 }
