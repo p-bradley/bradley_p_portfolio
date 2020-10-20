@@ -29,12 +29,12 @@ html, body {
   overflow: hidden;
 }
 
-.skillActive {
-  display: block;
+.skillTransitionLeft {
+  transform: translateX(-100%);
 }
 
-.skillInactive {
-  display: none;
+.skillTransitionRight {
+  transform: translateX(0);
 }
 
 .test {

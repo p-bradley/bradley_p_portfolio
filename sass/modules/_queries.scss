@@ -202,30 +202,39 @@
         
             }
 
-            .skillsConTab {
-                width: 100%;
-                margin: 5% auto 0;
-                
-                .galleryTab {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    width: 82%;
-                    margin: 0 auto;
-                    div {
-                        width: 30%;
-                        margin-top: 5%;
-                        img {
-                            width: 80%;
-                            margin: 0 auto;
-                            display: flex;
+            .skillsTabContainer {
+                width: 90%;
+                overflow: hidden;
+                display: flex;
+                margin: 0 auto;
+                .skillsConTab {
+                    width: 100%;
+                    margin: 5% auto 0;
+                    flex: 1 0 auto;
+                    transition: transform 0.5s ease;
+                    padding: 0 40% 0 0;
+                    
+                    .galleryTab {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        width: 82%;
+                        margin: 0 auto;
+                        div {
+                            width: 30%;
+                            margin-top: 5%;
+                            img {
+                                width: 80%;
+                                margin: 0 auto;
+                                display: flex;
+                            }
+                            p {
+                                margin-top: 6%;
+                                text-align: center;
+                                font-family: $paragraph-text;
+                                font-size: 2.2vw;
+                            }
                         }
-                        p {
-                            margin-top: 6%;
-                            text-align: center;
-                            font-family: $paragraph-text;
-                            font-size: 2.2vw;
-                          }
                     }
                 }
             }
@@ -398,22 +407,22 @@
             div {
                 margin: 1% auto 0;
                 a {
-                    width: 4%;
-                    margin-top: 0;
+                    width: 5%;
+                    margin-top: -0.25%;
                 }
                 a:nth-child(2) {
                     display: none;
                 }
             }
             ul {
-                margin-top: -4.75%;
+                margin-top: -5%;
                 display: flex;
                 justify-content: flex-end;
                 margin-right: 4%;
                 li {
                     padding: 2.75% 1.75% 2%;
                     a {
-                        font-size: 12px;
+                        font-size: 15px;
                         letter-spacing: 0.1vw;
                     }
                 }
@@ -423,9 +432,10 @@
 
     #about {
         width: 76%;
+        margin-bottom: 10%;
         h1 {
             margin-left: 0;
-            font-size: 1.6vw;
+            font-size: 28px;
         }
         .aboutWrapper {
             display: flex;
@@ -444,7 +454,7 @@
                     margin-left: -1%;
                 }
                 h3 {
-                    font-size: 1.6vw;
+                    font-size: 28px;
                     margin-top: 3.5%;
                     margin-bottom: 4%;
                 }
@@ -468,7 +478,8 @@
         margin-bottom: 10%;
         h1 {
             margin-left: 0;
-            font-size: 1.6vw;
+            font-size: 28px;
+            margin-bottom: 7%;
         }
         .filterBtns {
             width: 33%;
@@ -482,6 +493,8 @@
             justify-content: space-evenly;
             .project {
                 width: 40%;
+                margin-top: 8%;
+                margin-bottom: 0;
                 .projTextLink {
                     width: 88%;
                     margin: 0 auto;
@@ -494,6 +507,10 @@
                     }
                     .projLink {
                         font-size: 16px;
+                        transition: color 0.3s ease;
+                        &:hover {
+                            color: #5b98d4;
+                        }
                     }
                 }
                 a.responsive {
@@ -512,7 +529,12 @@
                 }
                 a:nth-child(1) {
                     height: 20vw;
+                    max-height: 271px;
                     margin-bottom: 6%;
+                    transition: transform 0.2s ease;
+                    &:hover {
+                        transform: scale(1.15);
+                    }
                 }
             }
         }
@@ -520,8 +542,9 @@
 
     #skills {
         width: 76%;
+        margin-bottom: 10%;
         h1 {
-            font-size: 1.6vw;
+            font-size: 28px;
             margin-left: 0;
         }
         .allSkillsConTab {
@@ -531,19 +554,28 @@
                     font-size: 1.4vw;
                 }
             }
-            .skillsConTab {
-                .galleryTab {
-                    width: 64%;
-                    .gallery-cell {
-                        width: 26%;
-                        padding: 0 1%;
-                        p {
-                            font-size: 16px;
-                            margin-top: 14%;
+            .skillsTabContainer {
+                width: 63%;
+                overflow: hidden;
+                display: flex;
+                margin: 0 auto;
+                .skillsConTab {
+                    flex: 1 0 auto;
+                    transition: transform 0.5s ease;
+                    padding: 0 40% 0 0;
+                    .galleryTab {
+                        width: 100%;
+                        .gallery-cell {
+                            width: 26%;
+                            padding: 0 0;
+                            p {
+                                font-size: 16px;
+                                margin-top: 14%;
+                            }
                         }
-                    }
-                    .gallery-cell:nth-child(n+4) {
-                        margin-top: 8%;
+                        .gallery-cell:nth-child(n+4) {
+                            margin-top: 8%;
+                        }
                     }
                 }
             }
@@ -553,6 +585,7 @@
     #contact {
         h1 {
             font-size: 2.2vw;
+            padding: 6% 0 3%;
         }
         div {
             form {
@@ -594,4 +627,121 @@
             }
         }
     }
+
+    #project {
+        margin: -2% auto 2%;
+        width: 76%;
+        h1 {
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 28px;
+            width: 84%;
+            margin: 5% auto 1.2%;
+        }
+        p {
+            font-size: 16px;
+            line-height: 18px;
+            width: 84%;
+            margin: 0 auto;
+        }
+        .projectTop {
+            margin-top: 2%;
+            img {
+                width: 60%;
+            }
+            img.mobile {
+                width: 40%;
+            }
+            .roleToolCon {
+                display: flex;
+                width: 60%;
+                margin: 5% auto;
+                span {
+                    width: 50%;
+                    h2 {
+                        font-size: 28px;
+                        margin-top: 0;
+                        margin-bottom: 6%;
+                        text-align: center;
+                    }
+                    p {
+                        width: 66%;
+                        margin: 0 auto 2%;
+                        line-height: 18px;
+                        font-size: 16px;
+                    }
+                }
+                span:nth-child(1) {
+                    border-right: solid 2px lightgray;
+                }
+                span:nth-child(2) {
+                    p {
+                        display: flex;
+                        justify-content: center;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        .projectMiddle {
+            margin: 6% 0;
+        }
+        a {
+            margin: 10% 0 7%;
+            font-size: 1.2vw;
+            padding: 1% 0 1.2%;
+            width: 10%;
+            letter-spacing: 0.05vw;
+            justify-content: flex-start;
+            &::before {
+                padding-right: 4%;
+                padding-left: 10%;
+            }
+        }
+    }
+
+    #notFound {
+        h1 {
+            font-size: 2.8vw;
+        }
+        img {
+            width: 14%;
+        }
+        h2 {
+            font-size: 28px;
+            line-height: 2.2vw;
+            margin: 0.6% auto 2.2%;
+            width: 30%;
+        }
+    }
+    #messageSent {
+        margin-top: -5%;
+        h1 {
+            font-size: 2.2vw;
+            margin-bottom: 6%;
+        }
+        p {
+            font-size: 28px;
+        }
+        a {
+            font-size: 28px;
+        }
+        .sentQuote {
+            h2 {
+                font-size: 1.4vw;
+                line-height: 2vw;
+            }
+        }
+
+    }
 }
+
+/* 
+    TODO: h1 max size + about subheading - 28px
+    about paragraph line height - 1.1vw
+    abouttextcontent - margin-top 3%
+    filtText, skillfilttext - fontsize 20px
+    project a - height 14vw
+    gallery-cell - width 22%; padding 0 2%
+*/

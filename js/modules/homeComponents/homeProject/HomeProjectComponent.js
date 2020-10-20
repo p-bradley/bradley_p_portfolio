@@ -26,7 +26,8 @@ export default {
                 closingImg: project.closingImg,
                 closingTitle: project.closingTitle,
                 closingPara1: project.closingPara1,
-                closingPara2: project.closingPara2
+                closingPara2: project.closingPara2,
+                class: project.class
             }
         
         }">
@@ -52,7 +53,8 @@ export default {
                     closingImg: project.closingImg,
                     closingTitle: project.closingTitle,
                     closingPara1: project.closingPara1,
-                    closingPara2: project.closingPara2
+                    closingPara2: project.closingPara2,
+                    class: project.class
                 }
             
             }">
