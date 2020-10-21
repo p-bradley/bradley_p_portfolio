@@ -59,7 +59,7 @@ import NotFoundComponent from './NotFoundComponent.js';
             locationAbout() {
                 setTimeout(function() {
                     $('html, body').animate({
-                        scrollTop: $("#about").offset().top -80
+                        scrollTop: $("#about").offset().top -135
                     }, 500);
                 }, 50)
             },
@@ -67,7 +67,7 @@ import NotFoundComponent from './NotFoundComponent.js';
             locationWork() {
                 setTimeout(function() {
                     $('html, body').animate({
-                        scrollTop: $("#work").offset().top -80
+                        scrollTop: $("#work").offset().top -90
                     }, 500);
                 }, 50)
             },
@@ -75,7 +75,7 @@ import NotFoundComponent from './NotFoundComponent.js';
             locationSkills() {
                 setTimeout(function() {
                     $('html, body').animate({
-                        scrollTop: $("#skills").offset().top -80
+                        scrollTop: $("#skills").offset().top -90
                     }, 500);
                 }, 50)
             },
@@ -83,7 +83,7 @@ import NotFoundComponent from './NotFoundComponent.js';
             locationContact() {
                 setTimeout(function() {
                     $('html, body').animate({
-                        scrollTop: $("#contact").offset().top -80
+                        scrollTop: $("#contact").offset().top -60
                     }, 500);
                 }, 50)
             },
