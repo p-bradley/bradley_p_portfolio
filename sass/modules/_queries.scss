@@ -32,6 +32,133 @@
     }
 }
 
+@media screen and (min-width: 600px) {
+    .mainHeader {
+        max-height: 10vw;
+        .topNav {
+            div {
+                margin: 0 auto 6%;
+                a {
+                    width: 13%;
+                    margin-top: 1%;
+                }
+                a:nth-child(2) {
+                    width: 8%;
+                    margin-top: 1.5%;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+    }
+
+    #about {
+        h1 {
+            font-size: 4.8vw;
+        }
+        .aboutWrapper {
+            figure {
+                width: 70%;
+            }
+            .aboutTextCon {
+                p {
+                    font-size: 2vw;
+                    line-height: 2.3vw;
+                }
+            }
+        }
+    }
+    #work {
+        h1 {
+            font-size: 4.8vw;
+        }
+        .filterBtns {
+            .filtText {
+                font-size: 4.2vw;
+            }
+        }
+        .workCon {
+            .project {
+                a.mobile {
+                    width: 40%;
+                }
+                a.responsive {
+                    width: 70%;
+                }
+                .projTextLink {
+                    h2 {
+                        font-size: 4vw;
+                    }
+                    p {
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+    }
+    #skills {
+        h1 {
+            font-size: 4.8vw;
+        }
+        .skillsCon {
+            h2 {
+                font-size: 4.8vw;
+            }
+            .gallery {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    #contact {
+        h1 {
+            font-size: 4.8vw;
+        }
+        div {
+            input {
+                width: 40%;
+                font-size: 2vw;
+                &::placeholder, &::-webkit-input-placeholder {
+                    font-size: 2vw;
+                }
+            }
+            textarea {
+                font-size: 2vw;
+                width: 40%;
+                &::placeholder, &::-webkit-input-placeholder {
+                    font-size: 2vw;
+                }
+            }
+            button {
+                width: 20%;
+                font-size: 2vw;
+            }
+        }
+    }
+    
+    #footer {
+        .footerCon {
+            .footerIconCon {
+                width: 19%;
+            }
+            h2 {
+                font-size: 2vw;
+            }
+        }
+
+    }
+
+    .flickity-viewport {
+        height: 27vw !important;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .mainCon {
         margin-top: 17% !important;
