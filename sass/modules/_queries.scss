@@ -414,7 +414,7 @@
             font-size: 3.2vw;
         }
         p {
-            font-size: 2.8vw;
+            font-size: 2.4vw;
             line-height: 3.2vw;
             width: 95%;
         }
@@ -466,7 +466,7 @@
         justify-content: center;
         h1 {
             font-size: 3.2vw;
-            margin: 0 0 6%;
+            margin: 25% 0 6%;
             padding-top: 0;
         }
         img {
@@ -489,7 +489,7 @@
         h1 {
             font-size: 3.2vw;
             padding: 0;
-            margin-top: 0;
+            margin-top: 15%;
         }
         h2, p {
             font-size: 2.8vw;
@@ -541,6 +541,27 @@
             width: 60%;
         }
         p {
+            line-height: 3.2vw;
+        }
+    }
+
+    #notFound {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-size: 3.2vw;
+            margin: 0 0 6%;
+            padding-top: 0;
+        }
+        img {
+            width: 20%;
+            margin: 0 auto 6%;
+        }
+        h2 {
+            margin: 3% auto;
+            font-size: 2.8vw;
+            width: 41%;
             line-height: 3.2vw;
         }
     }
