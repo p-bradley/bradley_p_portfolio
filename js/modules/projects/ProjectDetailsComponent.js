@@ -87,13 +87,25 @@ export default {
         // this simplifies the front end for the content creator, and does not require a complicated SQL query or PHP script to fix
         textReplace() {
             let winHeight = window.screen.height,
-                winWidth = screen.width;
+                winWidth = screen.width,
+                innerW = window.innerWidth;
 
             var toolsDesc = document.getElementById("projTools") ;
             setTimeout(function() {
                 if (winWidth > 767) {
                     console.log(window.screen.width);
                     toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,', ');
+                } if (winWidth < 1365) {
+                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
+                } else {
+                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
+                }
+
+                if (innerW > 767) {
+                    console.log(window.screen.width);
+                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,', ');
+                } if (innerW < 1365) {
+                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
                 } else {
                     toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
                 }
