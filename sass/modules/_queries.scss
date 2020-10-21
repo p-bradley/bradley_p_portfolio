@@ -402,20 +402,20 @@
         margin-top: 9% !important;
     }
     .mainHeader {
-        max-height: 4.5vw;
+        max-height: 3.5vw;
         .topNav {
             div {
                 margin: 1% auto 0;
                 a {
-                    width: 5%;
-                    margin-top: -0.25%;
+                    width: 4%;
+                    margin-top: -0.5%;
                 }
                 a:nth-child(2) {
                     display: none;
                 }
             }
             ul {
-                margin-top: -5%;
+                margin-top: -4.5%;
                 display: flex;
                 justify-content: flex-end;
                 margin-right: 4%;
@@ -484,7 +484,7 @@
         .filterBtns {
             width: 33%;
             .filtText {
-                font-size: 1.4vw;
+                font-size: 20px;
             }
         }
         .workCon {
@@ -499,7 +499,7 @@
                     width: 88%;
                     margin: 0 auto;
                     h2 {
-                        font-size: 1.5vw;
+                        font-size: 24px;
                     }
                     p {
                         font-size: 16px;
@@ -551,7 +551,7 @@
             .skillsFilterBtns {
                 width: 45%;
                 .filtText {
-                    font-size: 1.4vw;
+                    font-size: 20px;
                 }
             }
             .skillsTabContainer {
@@ -641,7 +641,7 @@
         }
         p {
             font-size: 16px;
-            line-height: 18px;
+            line-height: 20px;
             width: 84%;
             margin: 0 auto;
         }
@@ -734,6 +734,94 @@
             }
         }
 
+    }
+
+    #projErr {
+        margin-top: -6%;
+        h1 {
+            font-size: 2.2vw;
+            margin-top: -5%;
+            text-align: center;
+        }
+
+        h2, p {
+            font-size: 18px;
+            width: 34%;
+            text-align: center;
+            margin: 3% auto 0;
+            line-height: 26px;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #skills {
+        .allSkillsConTab {
+            .skillsTabContainer {
+                .skillsConTab {
+                    .galleryTab {
+                        width: 74%;
+                    }
+                }
+            }
+        }
+    }
+    #project {
+        .projectIntro, .projectMiddle, .projectOutro {
+            width: 75%;
+            margin: 4% auto;
+        }
+        .projectTop {
+            img.mobile {
+                width: 35%;
+            }
+        }
+        a {
+            width: 7.5%;
+            font-size: 16px;
+            &::before {
+                padding-right: 6%;
+            }
+        }
+    }
+
+    #footer {
+        .footerCon {
+            h2 {
+                font-size: 16px;
+            }
+            .footerIconCon {
+                width: 6%;
+                a {
+                    width: 36%;
+                }
+            }
+        }
+    }
+    #messageSent {
+        margin-top: -5.5%;
+        h1 {
+            font-size: 2vw;
+        }
+        p {
+            font-size: 20px;
+            margin: 0.4% 0;
+        }
+        a {
+            font-size: 22px;
+        }
+        .sentQuote {
+            margin-top: 2%;
+            h2 {
+                font-size: 22px;
+                line-height: 1.6vw;
+            }
+        }
+    }
+    #projErr {
+        p {
+            width: 26%;
+        }
     }
 }
 
