@@ -40,8 +40,17 @@ export default {
     methods: {
         nameReplace() {
             let winHeight = window.screen.height,
-                winWidth = screen.width;
+                winWidth = screen.width,
+                innerW = screen.width;
+                
                 if (winWidth > 1199) {
+                    console.log(window.screen.width);
+                    $(".aboutName").text("Patrick Bradley");
+                } else {
+                    $(".aboutName").text("[ Patrick Bradley ]");
+                }
+
+                if (innerW > 1199) {
                     console.log(window.screen.width);
                     $(".aboutName").text("Patrick Bradley");
                 } else {
