@@ -4,6 +4,7 @@ export default {
     // what project was clicked. all of this data is grabbed specifically based on the id of the project clicked
     template: `
     <div>
+    <meta name="robots" content="noindex, nofollow">
     <section v-if="this.$route.params.name" id="project">
         <h1>[ {{ this.$route.params.name }} ]</h1>
         <div class="projectTop">
