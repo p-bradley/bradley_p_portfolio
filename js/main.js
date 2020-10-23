@@ -2,7 +2,6 @@
 // imports are always first
 import HomeComponent from './modules/HomeComponent.js';
 import ProjectDetailsComponent from './modules/projects/ProjectDetailsComponent.js';
-import ProjectExampleComponent from './projectExample.js';
 import MsgSentComponent from './modules/contact/MsgSentComponent.js';
 import NotFoundComponent from './NotFoundComponent.js';
 
@@ -20,9 +19,6 @@ import NotFoundComponent from './NotFoundComponent.js';
             // this path is for dynamic projects, reusing the same component to render dynamic data per project
             // without having to make a component for each project, or loading them all at once
             { path: "/projects/:id", name: "project-details", component: ProjectDetailsComponent },
-
-            // this is a testing environment link, so i dont have to keep going back to home to see how a project looks
-            { path: "/projectEx", component: ProjectExampleComponent },
 
             // 404 route, the route for when a defined route can't be found or if something goes wrong
             {path: '/404', name: "not-found", component: NotFoundComponent},
