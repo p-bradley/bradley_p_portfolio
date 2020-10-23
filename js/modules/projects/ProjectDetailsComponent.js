@@ -23,17 +23,17 @@ export default {
             </div>
         </div>
         <div class="projectIntro">
-            <img :src="'images/' + this.$route.params.introImg + '.jpg'">
+            <img :src="'images/' + this.$route.params.introImg + '.png'">
             <h2>{{ this.$route.params.introTitle }}</h2>
             <p>{{ this.$route.params.introPara }}</p>
         </div>
         <div class="projectMiddle">
-            <img :src="'images/' + this.$route.params.middleImg + '.jpg'">
+            <img :src="'images/' + this.$route.params.middleImg + '.png'">
             <h2>{{ this.$route.params.middleTitle }}</h2>
             <p>{{ this.$route.params.middlePara1 }}</p>
         </div>
         <div class="projectOutro">
-            <img :src="'images/' + this.$route.params.closingImg + '.jpg'">
+            <img :src="'images/' + this.$route.params.closingImg + '.png'">
             <h2>{{ this.$route.params.middleTitle }}</h2>
             <p>{{ this.$route.params.closingPara1 }}</p>
         </div>
