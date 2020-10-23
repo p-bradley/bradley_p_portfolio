@@ -52,11 +52,11 @@ html, body {
     0% {visibility: visible;}
     40% {opacity: 0;}
     99% {width: 31%; height: auto; position: relative; top: 0;}
-    100% {visibility: hidden; width: 0; height: 0; opacity: 0; position: absolute; top: -50%;}
+    100% {visibility: visible; width: 0; height: 0; opacity: 0; position: absolute; top: -50%;}
   }
 
   @keyframes addContent {
-    0% {visibility: hidden; opacity: 0; width: 0; height: 0; display: none !important;}
+    0% {visibility: visible; opacity: 0; width: 0; height: 0; display: none !important;}
     20% {opacity: 0;}
     79% {position: absolute; top: -50%;}
     80% {width: 31%; height: auto; opacity: 0; position: relative; top: 0;}

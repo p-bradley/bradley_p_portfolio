@@ -466,7 +466,7 @@
         justify-content: center;
         h1 {
             font-size: 3.2vw;
-            margin: 30% 0 6%;
+            margin: -10% 0 6%;
             padding-top: 0;
         }
         img {
@@ -591,7 +591,243 @@
     }
 }
 
-@media screen and (min-width: 1360px) {
+@media screen and (min-width: 900px) {
+    .mainHeader {
+        max-height: 8vw;
+        .topNav {
+            div {
+                a {
+                    width: 9%;
+                    margin-top: -0.75%;
+                }
+                a:nth-child(2) {
+                    width: 5.5%;
+                    margin-top: -0.5%;
+                }
+            }
+
+            ul {
+                li {
+                    a {
+                        font-size: 2.6vw;
+                    }
+                }
+            }
+        }
+    }
+
+    #about {
+        h1 {
+            font-size: 2.6vw;
+        }
+        .aboutWrapper {
+            figure {
+                width: 60%;
+            }
+            .aboutTextCon {
+                padding-top: 65%;
+                h2 {
+                    font-size: 2.6vw;
+                }
+                h3 {
+                    font-size: 2.4vw;
+                }
+                p {
+                    font-size: 17px;
+                    width: 90%;
+                    hyphens: none;
+                    -webkit-hyphens: none;
+                    line-height: 21px;
+                    margin-top: 3%;
+                }
+            }
+        }
+    }
+    
+    #work {
+        margin-bottom: 10%;
+        h1 {
+            font-size: 2.6vw;
+        }
+        .filterBtns {
+            width: 33%;
+            .filtText {
+                font-size: 20px;
+            }
+        }
+        .workCon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .project {
+                width: 40%;
+                margin-top: 8%;
+                margin-bottom: 0;
+                .projTextLink {
+                    width: 97%;
+                    margin: 10% auto 0;
+                    h2 {
+                        font-size: 24px;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 18px;
+                    }
+                    .projLink {
+                        font-size: 16px;
+                        transition: color 0.3s ease;
+                        &:hover {
+                            color: #5b98d4;
+                        }
+                    }
+                }
+                a.responsive {
+                    align-items: flex-end;
+                }
+                a {
+                    img {
+                        margin: 0 auto;
+                    }
+                    img.mobile {
+                        max-width: 280px;
+                    }
+                    img.responsive {
+                        max-width: 470px;
+                    }
+                }
+                a:nth-child(1) {
+                    height: 27vw;
+                    max-height: 271px;
+                    margin-bottom: 6%;
+                    transition: transform 0.2s ease;
+                    &:hover {
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+    }
+
+    #skills {
+        h1 {
+            font-size: 2.6vw;
+        }
+        .allSkillsConTab {
+            .skillsFilterBtns {
+                .filtText {
+                    font-size: 2.2vw;
+                }
+            }
+            .skillsTabContainer {
+                .skillsConTab {
+                    margin-top: 8%;
+                    .galleryTab {
+                        div {
+                            img {
+                                width: 70%;
+                            }
+                            p {
+                                font-size: 1.7vw;
+                            }
+                        }
+                        div:nth-child(n + 4) {
+                            margin-top: 8%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #contact {
+        h1 {
+            font-size: 2.8vw;
+            padding: 8% 0 5%;
+        }
+        div {
+            input {
+                font-size: 1.8vw;
+                width: 75%;
+            }
+            textarea {
+                font-size: 1.8vw;
+                height: 23vw;
+                width: 75%;
+            }
+            button {
+                font-size: 2vw;
+                width: 26%;
+            }
+        }
+    }
+
+    #footer {
+        .footerCon {
+            .footerIconCon {
+                width: 11%;
+            }
+            h2 {
+                font-size: 2vw;
+            }
+        }
+    }
+
+    #project {
+        h1 {
+            font-size: 2.6vw;
+        }
+        h2 {
+            font-size: 2.6vw;
+            margin-bottom: 3%;
+        }
+        p {
+            font-size: 2vw;
+            line-height: 2.6vw;
+        }
+        a {
+            font-size: 2vw;
+            padding: 2% 0 2.5%;
+            width: 19%;
+        }
+        .projectTop {
+            h2 {
+                font-size: 2.6vw;
+            }
+            span {
+                p {
+                    font-size: 2vw;
+                    line-height: 2.6vw;
+                }
+            }
+        }
+    }
+
+    #messageSent {
+        h1 {
+            margin-top: -25%;
+        }
+        p {
+            font-size: 2.2vw;
+        }
+        a {
+            font-size: 2.2vw;
+        }
+        .sentQuote {
+            h2 {
+                font-size: 2vw;
+                line-height: 2.4vw;
+            }
+        }
+    }
+
+    #notFound {
+        h2 {
+            font-size: 2.2vw;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
     .navToggle {
         max-height: 3.5vw !important;
         padding-bottom: 0 !important;
