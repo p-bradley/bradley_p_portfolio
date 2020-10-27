@@ -8,7 +8,7 @@ export default {
     // this template will be used for as many card entires there are in the database
     `
     <div :class="'card card' + card.id">
-        <img :src="'images/' + card.img + '.png'" :alt="'image of ' + card.name + '.png'">
+        <img :src="'images/' + card.img + '.png'" :alt="'image of ' + card.name">
     </div>
     `
 }
