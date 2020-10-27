@@ -34,7 +34,7 @@ export default {
         </div>
         <div class="projectOutro">
             <img :src="'images/' + this.$route.params.closingImg + '.png'">
-            <h2>{{ this.$route.params.middleTitle }}</h2>
+            <h2>{{ this.$route.params.closingTitle }}</h2>
             <p>{{ this.$route.params.closingPara1 }}</p>
         </div>
         <router-link class="projBackBtn" v-on:click.native="scrollToWork()" :to="{ path: '../' }">back</router-link>
