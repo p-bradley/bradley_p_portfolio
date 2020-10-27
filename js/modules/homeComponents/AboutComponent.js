@@ -25,9 +25,9 @@ export default {
         // this data is placeholder for when picture actually get put in
         return {
             cards: [
-                {id: '1', name: 'card one', img: 'smallImg'},
-                {id: '2', name: 'card two', img: 'smallImg'},
-                {id: '3', name: 'card three', img: 'smallImg'},
+                {id: '1', name: 'profile image 1', img: 'profilepic1'},
+                {id: '2', name: 'profile image 2', img: 'profilepic2'},
+                {id: '3', name: 'profile image 3', img: 'profilepic3'},
             ]
         }
     },
