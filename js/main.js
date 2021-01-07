@@ -47,7 +47,6 @@ import NotFoundComponent from './NotFoundComponent.js';
             toggleNav() {
                 let topNav = document.querySelector(".mainHeader");
                 topNav.classList.toggle("navToggle")
-                console.log("test");
             },
 
 
