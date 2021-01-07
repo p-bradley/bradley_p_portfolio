@@ -1,3 +1,32 @@
+@media screen and (min-width: 320px) {
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        object-fit: contain;
+                        max-height: 210px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 245px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 340px) {
     .flickity-viewport {
         height: 61vw !important;
@@ -27,6 +56,33 @@
             button {
                 width: 40%;
                 font-size: 3.6vw;
+            }
+        }
+    }
+
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 271px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: 480px) {
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 314px;
+                    }
+                }
             }
         }
     }
@@ -266,6 +322,12 @@
                     align-items: flex-start;
                     img {
                         margin: 0 auto 8%;
+                    }
+                }
+
+                a.mobile {
+                    img {
+                        max-height: 287px;
                     }
                 }
                 .projTextLink {
@@ -552,6 +614,17 @@
             }
         }
     }
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 367px;
+                    }
+                }
+            }
+        }
+    }
     #projErr {
         display: flex;
         flex-direction: column;
@@ -588,6 +661,20 @@
             font-size: 2.8vw;
             width: 41%;
             line-height: 3.2vw;
+        }
+    }
+}
+
+@media screen and (min-width: 834px) {
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 399px;
+                    }
+                }
+            }
         }
     }
 }
@@ -685,6 +772,13 @@
                 a.responsive {
                     align-items: flex-end;
                 }
+
+                a.mobile {
+                    img {
+                        max-height: 246px;
+                    }
+                }
+
                 a {
                     img {
                         margin: 0 auto;
@@ -951,12 +1045,18 @@
                 a.responsive {
                     align-items: flex-end;
                 }
+
+                a.mobile {
+                    max-height: 265px;
+                }
+
                 a {
                     img {
                         margin: 0 auto;
                     }
                     img.mobile {
                         max-width: 280px;
+                        max-height: 250px;
                     }
                     img.responsive {
                         max-width: 470px;
@@ -1190,6 +1290,20 @@
     }
 }
 
+@media screen and (min-width: 1400px) {
+    #work {
+        .workCon {
+            .project {
+                a {
+                    img.mobile {
+                        max-height: 275px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1600px) {
     #skills {
         .allSkillsConTab {
@@ -1215,6 +1329,7 @@
                 width: 50%;
             }
         }
+
         a {
             width: 7.5%;
             font-size: 16px;
