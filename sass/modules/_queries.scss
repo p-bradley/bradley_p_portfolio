@@ -1,3 +1,27 @@
+@media screen and (min-width: 320px) {
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        object-fit: contain;
+                        max-height: 210px;
+                    }
+                }
+            }
+        }
+    }
+
+    #project {
+        .projectTop {
+            img.mobile {
+                max-height: 251px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 340px) {
     .flickity-viewport {
         height: 61vw !important;
@@ -15,6 +39,28 @@
     }
 }
 
+@media screen and (min-width: 375px) {
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 245px;
+                    }
+                }
+            }
+        }
+    }
+
+    #project {
+        .projectTop {
+            img.mobile {
+                max-height: 294px;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 414px) {
     #contact {
         div {
@@ -27,6 +73,49 @@
             button {
                 width: 40%;
                 font-size: 3.6vw;
+            }
+        }
+    }
+
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 271px;
+                    }
+                }
+            }
+        }
+    }
+
+    #project {
+        .projectTop {
+            img.mobile {
+                max-height: 325px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: 480px) {
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 314px;
+                    }
+                }
+            }
+        }
+    }
+
+    #project {
+        .projectTop {
+            img.mobile {
+                max-height: 251px;
             }
         }
     }
@@ -222,6 +311,7 @@
                     font-size: 2.4vw;
                     line-height: 3vw;
                     width: 97%;
+                    font-weight: 500;
                     -ms-word-break: break-all;
                     word-break: break-all;
                     /* Non standard for WebKit */
@@ -266,6 +356,12 @@
                     align-items: flex-start;
                     img {
                         margin: 0 auto 8%;
+                    }
+                }
+
+                a.mobile {
+                    img {
+                        max-height: 287px;
                     }
                 }
                 .projTextLink {
@@ -427,6 +523,7 @@
             margin-top: 7%;
             img.mobile {
                 width: 50%;
+                max-height: 232px;
             }
             img {
                 width: 80%;
@@ -552,6 +649,26 @@
             }
         }
     }
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 367px;
+                    }
+                }
+            }
+        }
+    }
+
+    #project {
+        .projectTop {
+            img.mobile {
+                max-height: 298px;
+            }
+        }
+    }
+
     #projErr {
         display: flex;
         flex-direction: column;
@@ -588,6 +705,28 @@
             font-size: 2.8vw;
             width: 41%;
             line-height: 3.2vw;
+        }
+    }
+}
+
+@media screen and (min-width: 834px) {
+    #work {
+        .workCon {
+            .project {
+                a.mobile {
+                    img {
+                        max-height: 399px;
+                    }
+                }
+            }
+        }
+    }
+
+    #project {
+        .projectTop {
+            img.mobile {
+                max-height: 323px;
+            }
         }
     }
 }
@@ -685,6 +824,13 @@
                 a.responsive {
                     align-items: flex-end;
                 }
+
+                a.mobile {
+                    img {
+                        max-height: 246px;
+                    }
+                }
+
                 a {
                     img {
                         margin: 0 auto;
@@ -800,6 +946,10 @@
                     line-height: 2.6vw;
                 }
             }
+            img.mobile {
+                max-height: 349px;
+            }
+            
         }
     }
 
@@ -951,12 +1101,18 @@
                 a.responsive {
                     align-items: flex-end;
                 }
+
+                a.mobile {
+                    max-height: 265px;
+                }
+
                 a {
                     img {
                         margin: 0 auto;
                     }
                     img.mobile {
                         max-width: 280px;
+                        max-height: 250px;
                     }
                     img.responsive {
                         max-width: 470px;
@@ -1087,6 +1243,7 @@
             }
             img.mobile {
                 width: 40%;
+                max-height: 353px;
             }
             .roleToolCon {
                 display: flex;
@@ -1119,8 +1276,20 @@
                 }
             }
         }
+
+        .projectIntro {
+            p {
+                margin-bottom: 3%;
+            }
+        }
+
+
         .projectMiddle {
             margin: 6% 0;
+
+            p {
+                margin-bottom: 3%;
+            }
         }
         a {
             margin: 10% 0 7%;
@@ -1132,6 +1301,12 @@
             &::before {
                 padding-right: 4%;
                 padding-left: 10%;
+            }
+        }
+
+        .projectOutro {
+            p {
+                margin-bottom: 3%;
             }
         }
     }
@@ -1190,6 +1365,28 @@
     }
 }
 
+@media screen and (min-width: 1400px) {
+    #work {
+        .workCon {
+            .project {
+                a {
+                    img.mobile {
+                        max-height: 275px;
+                    }
+                }
+            }
+        }
+    }
+
+    #project {
+        .projectTop {
+            img.mobile {
+                max-height: 412px;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1600px) {
     #skills {
         .allSkillsConTab {
@@ -1210,11 +1407,13 @@
         .projectTop {
             img.mobile {
                 width: 35%;
+                max-height: 412px;
             }
             img.responsive {
                 width: 50%;
             }
         }
+
         a {
             width: 7.5%;
             font-size: 16px;
@@ -1321,6 +1520,14 @@
             margin-left: 1vw;
         }
     }
+
+    #project {
+        .projectTop {
+            img.mobile {
+                max-height: 451px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1850px) {
@@ -1355,6 +1562,14 @@
     #skills {
         h1 {
             margin-left: 2.25vw;
+        }
+    }
+
+    #projects {
+        .projectTop {
+            img.mobile {
+                max-height: 490px;
+            }
         }
     }
 }
