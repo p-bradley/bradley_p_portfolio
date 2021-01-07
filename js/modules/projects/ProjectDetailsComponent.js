@@ -26,16 +26,19 @@ export default {
             <img :src="'images/' + this.$route.params.introImg + '.png'">
             <h2>{{ this.$route.params.introTitle }}</h2>
             <p>{{ this.$route.params.introPara }}</p>
+            <p class="para2" id="introPara2">{{ this.$route.params.introPara2 }}</p>
         </div>
         <div class="projectMiddle">
             <img :src="'images/' + this.$route.params.middleImg + '.png'">
             <h2>{{ this.$route.params.middleTitle }}</h2>
             <p>{{ this.$route.params.middlePara1 }}</p>
+            <p class="para2" id="middlePara2">{{ this.$route.params.middlePara2 }}</p>
         </div>
         <div class="projectOutro">
             <img :src="'images/' + this.$route.params.closingImg + '.png'">
             <h2>{{ this.$route.params.closingTitle }}</h2>
             <p>{{ this.$route.params.closingPara1 }}</p>
+            <p class="para2" id="closingPara2">{{ this.$route.params.closingPara2 }}</p>
         </div>
         <router-link class="projBackBtn" v-on:click.native="scrollToWork()" :to="{ path: '../' }">back</router-link>
     </section>
@@ -62,7 +65,7 @@ export default {
 
         this.textReplace();
 
-
+        this.checkPara();
     },
 
     methods: {
@@ -111,6 +114,30 @@ export default {
                     toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
                 }
             }, 100);
+        },
+
+        checkPara() {
+            let content1 = document.getElementById("introPara2").innerHTML,
+                content2 = document.getElementById("middlePara2").innerHTML,
+                content3 = document.getElementById("closingPara2").innerHTML;
+
+            if (content1 == null || content1 == "") {
+                $("#introPara2").hide();
+            } else {
+                return
+            }
+
+            if (content2 == null || content2 == "") {
+                $("#middlePara2").hide();
+            } else {
+                return
+            }
+
+            if (content3 == null || content3 == "") {
+                $("#closingPara").hide();
+            } else {
+                return
+            }
         }
     }
 }

@@ -15,7 +15,6 @@ export default {
                 <h2 class="aboutName">[ Patrick Bradley ]</h2>
                 <h3>UX/UI Designer</h3>
                 <p>Hey! I'm Patrick, a London, Ontario based UX/UI Designer that focuses on simplifying modern interfaces to produce unique, engaging user experiences for responsive websites and mobile applications.</p>
-                <p>My interests (outside of design): hockey, swimming, thrifting, 90's and early 2000's Nintendo games, lofi-house, Stanley Kubrick and Quentin Tarantino movies, and photography!</p>
             </div>
         </div>
     </section>
