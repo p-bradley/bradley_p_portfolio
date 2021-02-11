@@ -18,7 +18,7 @@ import NotFoundComponent from './NotFoundComponent.js';
 
             // this path is for dynamic projects, reusing the same component to render dynamic data per project
             // without having to make a component for each project, or loading them all at once
-            { path: "/projects/:id", name: "project-details", component: ProjectDetailsComponent },
+            { path: "/projects/:id", name: "project-details", component: ProjectDetailsComponent, props: true },
 
             // 404 route, the route for when a defined route can't be found or if something goes wrong
             {path: '/404', name: "not-found", component: NotFoundComponent},

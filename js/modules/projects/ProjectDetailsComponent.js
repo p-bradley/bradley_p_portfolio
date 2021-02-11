@@ -5,58 +5,58 @@ export default {
     template: `
     <div>
     <meta name="robots" content="noindex, nofollow">
-    <section v-if="this.$route.params.name" id="project">
-        <h1>[ {{ this.$route.params.name }} ]</h1>
+    <section id="project">
+        <h1>[ {{ project.name }} ]</h1>
         <div class="projectTop">
-            <img :class="this.$route.params.class" :src="'images/' + this.$route.params.previewImg + '.png'">
+            <img :class="project.class" :src="'images/' + project.previewImg + '.png'">
             <div class="roleToolCon">
                 <span>
                     <h2>my role</h2>
-                    <p>{{ this.$route.params.roleDesc }}</p>
+                    <p>{{ project.roleDesc }}</p>
                 </span>
                 <span>
                     <h2>Tools Used</h2>
                     <p id="projTools">
-                        {{ this.$route.params.toolsDesc }}
+                        {{ project.toolsDesc }}
                     </p>
                 </span>
             </div>
         </div>
         <div class="projectIntro">
-            <img :src="'images/' + this.$route.params.introImg + '.png'">
-            <h2>{{ this.$route.params.introTitle }}</h2>
-            <p>{{ this.$route.params.introPara }}</p>
-            <p class="para2" id="introPara2">{{ this.$route.params.introPara2 }}</p>
+            <img :src="'images/' + project.introImg + '.png'">
+            <h2>{{ project.introTitle }}</h2>
+            <p>{{ project.introPara }}</p>
+            <p class="para2" id="introPara2">{{ project.introPara2 }}</p>
         </div>
         <div class="projectMiddle">
-            <img :src="'images/' + this.$route.params.middleImg + '.png'">
-            <h2>{{ this.$route.params.middleTitle }}</h2>
-            <p>{{ this.$route.params.middlePara1 }}</p>
-            <p class="para2" id="middlePara2">{{ this.$route.params.middlePara2 }}</p>
+            <img :src="'images/' + project.middleImg + '.png'">
+            <h2>{{ project.middleTitle }}</h2>
+            <p>{{ project.middlePara1 }}</p>
+            <p class="para2" id="middlePara2">{{ project.middlePara2 }}</p>
         </div>
         <div class="projectOutro">
-            <img :src="'images/' + this.$route.params.closingImg + '.png'">
-            <h2>{{ this.$route.params.closingTitle }}</h2>
-            <p>{{ this.$route.params.closingPara1 }}</p>
-            <p class="para2" id="closingPara2">{{ this.$route.params.closingPara2 }}</p>
+            <img :src="'images/' + project.closingImg + '.png'">
+            <h2>{{ project.closingTitle }}</h2>
+            <p>{{ project.closingPara1 }}</p>
+            <p class="para2" id="closingPara2">{{ project.closingPara2 }}</p>
         </div>
         <router-link class="projBackBtn" v-on:click.native="scrollToWork()" :to="{ path: '../' }">back</router-link>
     </section>
-    <section id="projErr" v-else>
-        <h1>[ oops ]</h1>
-        <h2>Looks like you tried refreshing a project.</h2>
-        <p>The project you click doesn't actually have a set link, you create one when you click the project.</p>
-        <p>Because of this, when you refresh the page, there isn't any data to load, because you didn't choose a project.</p>
-        <P>This helps me save money on server storage and allows for extremely fast load times, unfortunately this is the downside.</p>
-        <p>I am working on a fix for this, terribly sorry. Please <router-link to="/">Click Here</router-link> to go back to the home page.</p>
-    </section>
     </div>
     `,
+
+    data() {
+        return {
+            project: {}
+        }
+    },
 
     created: function() {
     },
 
     mounted: function() {
+
+        this.getData();
 
         // transition to the top of the page when loaded
         $('html, body').animate({
@@ -69,6 +69,25 @@ export default {
     },
 
     methods: {
+        getData() {
+            let url = `./config/index.php?getWork=true`;
+    
+                // AJAX fetch call grabbing data and converting it to json
+                fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    // set items array to the data grabbed
+                    // allowing it to be displayed and used elsewhere
+                    this.project = data[this.id]
+    
+                    console.log(this.project)
+                })
+    
+                // Catch any errors
+                .catch((err) => console.log(err))
+        },
+
+
         // because the page is completely dynamic, it doesnt exist outside of this page, it requires content loaded elsewhere
         // this is fine if navigated back to the home page, because that is where the content is loaded from, but refresh breaks it
         unload() {
