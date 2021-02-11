@@ -1,4 +1,5 @@
 export default {
+    props: ['id'],
     // this template is for the unique projects page that users are sent to when clicking a project
     // it takes the data that was grabbed from the database in the projects component and renders it selectively based on
     // what project was clicked. all of this data is grabbed specifically based on the id of the project clicked
@@ -45,18 +46,18 @@ export default {
     </div>
     `,
 
+    created: function() {
+    },
+
     data() {
         return {
             project: {}
         }
     },
 
-    created: function() {
-    },
-
     mounted: function() {
 
-        this.getData();
+        this.getData()
 
         // transition to the top of the page when loaded
         $('html, body').animate({
@@ -70,23 +71,23 @@ export default {
 
     methods: {
         getData() {
-            let url = `./config/index.php?getWork=true`;
+                // this URL is the link to the database content needed for each project
+                let url = `./config/index.php?getProject${this.id}=true`;
     
                 // AJAX fetch call grabbing data and converting it to json
                 fetch(url)
                 .then(res => res.json())
                 .then(data => {
+
                     // set items array to the data grabbed
                     // allowing it to be displayed and used elsewhere
-                    this.project = data[this.id]
+                    this.project = data[0]
     
-                    console.log(this.project)
                 })
     
                 // Catch any errors
                 .catch((err) => console.log(err))
         },
-
 
         // because the page is completely dynamic, it doesnt exist outside of this page, it requires content loaded elsewhere
         // this is fine if navigated back to the home page, because that is where the content is loaded from, but refresh breaks it
@@ -109,8 +110,7 @@ export default {
         // this is checking for any commas in the project tools section, and replacing them with line breaks
         // this simplifies the front end for the content creator, and does not require a complicated SQL query or PHP script to fix
         textReplace() {
-            let winHeight = window.screen.height,
-                winWidth = screen.width,
+            let winWidth = screen.width,
                 innerW = window.innerWidth;
 
             var toolsDesc = document.getElementById("projTools") ;
@@ -118,20 +118,17 @@ export default {
                 if (winWidth > 767) {
                     console.log(window.screen.width);
                     toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,', ');
-                } if (winWidth < 1365) {
-                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
-                } else {
-                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
                 }
+
+                if (winWidth < 1365) {toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');} 
+                else {toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');}
 
                 if (innerW > 767) {
                     console.log(window.screen.width);
-                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,', ');
-                } if (innerW < 1365) {
-                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
-                } else {
-                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');
-                }
+                    toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,', ');} 
+                
+                if (innerW < 1365) { toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');} 
+                else {toolsDesc.innerHTML = toolsDesc.innerHTML.replace( /,/g,'<br>');}
             }, 100);
         },
 
@@ -141,22 +138,13 @@ export default {
                 content3 = document.getElementById("closingPara2").innerHTML;
 
             if (content1 == null || content1 == "") {
-                $("#introPara2").hide();
-            } else {
-                return
-            }
+                $("#introPara2").hide();} else {return}
 
             if (content2 == null || content2 == "") {
-                $("#middlePara2").hide();
-            } else {
-                return
-            }
+                $("#middlePara2").hide();} else {return}
 
             if (content3 == null || content3 == "") {
-                $("#closingPara").hide();
-            } else {
-                return
-            }
+                $("#closingPara").hide(); } else {return}
         }
     }
 }
